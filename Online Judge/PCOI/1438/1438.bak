@@ -1,0 +1,5 @@
+var n,r:int64;
+begin
+    readln(n);
+    writeln(n*(n-1)/2:0:0);
+end.

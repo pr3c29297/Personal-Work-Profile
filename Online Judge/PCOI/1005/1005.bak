@@ -1,0 +1,23 @@
+var a,b,c,d,e,f,g,h,i,j,k,l:longint;
+    ans,t:double;
+begin
+     readln(a,b,c,d);
+     readln(e,f,g,h);
+     ans:=32767;
+     for i:= b to d do
+     begin
+          for j:= a to c do
+          begin
+               for k:= e to g do
+               begin
+                    for l:= f to h do
+                    begin
+                         t:=sqrt((k-j)*(k-j) + (l-i)*(l-i));
+                         if t<ans then
+                         ans:=t;
+                    end;
+               end;
+          end;
+     end;
+     writeln(ans:0:2);
+end.

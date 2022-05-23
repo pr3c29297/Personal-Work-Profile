@@ -1,0 +1,29 @@
+var a:array[0..30000] of longint;
+    n,i,j,k,m,c,r:longint;
+begin
+      readln(n);
+      a[0]:=10001;
+      for i:= 1 to n do
+      begin
+           readln(a[i]);
+      end;
+      m:=a[1];
+      c:=0;
+      for i:= 1 to n do
+      begin
+           if (a[i]<m) then
+           begin
+                inc(c);
+           end
+           else
+           begin
+                for j:= i-1 downto i-c do
+                begin
+                r:=r+m-a[j];
+                end;
+                m:=a[i];
+                c:=0;
+           end;
+      end;
+      writeln(r);
+end.

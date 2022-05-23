@@ -1,0 +1,31 @@
+var a:array[1..10,1..10] of longint;
+    i,j,k,n,s:longint;
+begin
+     readln(n);
+     for i:= 1 to n do
+     begin
+          for j:= 1 to n do
+          begin
+               if (a[i,j]<>1) or (a[i,j]<>2) then
+               begin
+                    a[i,j]:=1;
+                    inc(s);
+                    for k:= 1 to n do
+                    begin
+                         if k<>j then
+                         a[i,k]:=2;
+                         if k<>i then
+                         a[k,j]:=2;
+                         if (k<>i) and (k<>j) then
+                         a[k,k]:=2;
+                    end;
+               end;
+          end;
+     end;
+     for i:= 1 to n do
+     begin
+          for j:= 1 to n do
+          write(a[i,j]);
+          writeln;
+     end;
+end.

@@ -1,0 +1,27 @@
+var c,a:array[1..2000] of char;
+    n,i,s,e,j:longint;
+begin
+     readln(n);
+     for i:= 1 to n do
+     readln(c[i]);
+     s:=1;
+     e:=n;
+     i:=1;
+     while i<=n do
+     begin
+      if c[s]<c[e] then
+      begin
+       a[i]:=c[s];
+       s:=s+1;
+      end
+      else
+      begin
+       a[i]:=c[e];
+       e:=e-1;
+      end;
+      i:=i+1;
+     end;
+     for j:= 1 to n do
+     write(a[i]);
+     writeln;
+end.

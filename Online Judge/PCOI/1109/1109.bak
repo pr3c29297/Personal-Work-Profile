@@ -1,0 +1,38 @@
+uses math;
+var s:ansistring;
+    j:real;
+    i,k,l,t:longint;
+    a:array[1..8] of longint;
+    c:array[1..8] of char;
+begin
+     readln(s);
+     for i:= 1 to length(s) do
+     c[i]:=s[i];
+     for i:= 1 to length(s) do
+     begin
+      if c[i]='A' then
+      a[i]:=10
+      else if c[i]='B' then
+      a[i]:=11
+      else if c[i]='C' then
+      a[i]:=12
+      else if c[i]='D' then
+      a[i]:=13
+      else if c[i]='E' then
+      a[i]:=14
+      else if c[i]='F' then
+      a[i]:=15
+      else
+      a[i]:=ord(c[i])-ord('0');
+      end;
+      j:=0;
+      k:=length(s);
+      for i:=1 to length(s) do
+      begin
+       j:=j+(a[i]*(power(16,(k-1))));
+       k:=k-1;
+      end;
+      l:=trunc(j);
+      end;
+     end.
+

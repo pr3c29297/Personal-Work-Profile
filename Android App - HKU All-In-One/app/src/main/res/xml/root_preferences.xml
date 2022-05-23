@@ -1,0 +1,45 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory app:title="@string/Profile_header">
+
+        <Preference
+            app:key="key_username"
+            app:title="@string/username"
+            app:summary="PlaceHolder"/>
+        <SwitchPreference
+            app:key="key_stay_login"
+            app:title="Remember Me"/>
+        <Preference
+            app:key="@string/key_logout"
+            app:title="@string/logout_title"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/about_header">
+        <Preference
+            app:key="about"
+            app:selectable="false"
+            app:summary="@string/summary_about">
+        </Preference>
+        <Preference
+            app:key="version"
+            app:title="@string/version_title"
+            app:summary="@string/version"/>
+        <Preference
+            app:key="@string/key_send_feedback"
+            app:title="@string/title_send_feedback"
+            app:summary="@string/summary_feedback">
+        </Preference>
+        <Preference
+            app:title="@string/data_collection_title"
+            app:summary="@string/dpp_summary"
+            >
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="@string/url_dpp" />
+        </Preference>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

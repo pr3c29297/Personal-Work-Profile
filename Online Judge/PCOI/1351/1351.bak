@@ -1,0 +1,38 @@
+var n,i,j,k,r:longint;
+    c,e:array[1..20000] of longint;
+begin
+     readln(n);
+     for i:= 1 to n do
+     read(c[i]);
+     readln;
+     for i:= 1 to n do
+     read(e[i]);
+     for i:= 1 to n-1 do
+     begin
+          for j:= 1 to n-i do
+          begin
+                if e[j]<e[j+1] then
+                begin
+                     k:=e[j];
+                     e[j]:=e[j+1];
+                     e[j+1]:=k;
+                     k:=c[j];
+                     c[j]:=c[j+1];
+                     c[j+1]:=k;
+               if (e[j]=e[j+1]) and (c[j]>c[j+1]) then
+               begin
+                    k:=c[j];
+                    c[j]:=c[j+1];
+                    c[j+1]:=k;
+               end;
+                end;
+          end;
+     end;
+     for i:= 1 to n do
+     begin
+          r:=r+c[i];
+          for j:= i to n do
+          c[j]:=c[j]+e[j];
+     end;
+     writeln(r);
+end.

@@ -1,0 +1,86 @@
+var c:array[1..1000000] of char;
+    temp,i,n,j,b,k,f,z1,z2,t:longint;
+    s:ansistring;
+    d:char;
+    a:array[1..20,1..20] of char;
+begin
+     readln(z1,z2);
+     readln(d);
+     readln(n);
+     for i:= 1 to n do
+     read(c[i]);
+     if d='e' then
+     begin
+     for i:= 1 to n do
+     begin
+     if c[i]=' ' then
+     c[i]:='^';
+     if c[i] in ['A'..'M'] then
+     begin
+     temp:=ord('Z')-(ord(c[i])-ord('A'));
+     c[i]:=chr(ord(temp));
+     end
+     else if c[i] in ['N'..'Z'] then
+     begin
+     temp:=ord('A')+(ord('Z')-ord(c[i]));
+     c[i]:=chr(ord(temp));
+     end;
+     end;
+     while n mod 20<>0 do
+     begin
+      inc(n);
+      c[n]:='^';
+     end;
+     while b<=n do
+     begin
+     for i:= 1 to z1 do
+     for j:= 1 to z2 do
+     begin
+     inc(k);
+      a[i,j]:=c[k];
+     end;
+     for i:= 1 to z2 do
+     for j:= 1 to z1 do
+     write(a[j,i]);
+     b:=k;
+     b:=b+20;
+     end;
+     writeln;
+     end
+
+     else
+
+     begin
+     for i:= 1 to n do
+     begin
+     if c[i]='^' then
+     c[i]:=' ';
+     if c[i] in ['A'..'M'] then
+     begin
+     temp:=ord('Z')-(ord(c[i])-ord('A'));
+     c[i]:=chr(ord(temp));
+     end
+     else if c[i] in ['N'..'Z'] then
+     begin
+     temp:=ord('A')+(ord('Z')-ord(c[i]));
+     c[i]:=chr(ord(temp));
+     end;
+     end;
+     while c[n]=' ' do
+     dec(n);
+     while k<=n do
+     begin
+     for i:= 1 to z2 do
+     for j:= 1 to z1 do
+     begin
+     if k<=n then
+     inc(k);
+      a[j,i]:=c[k];
+     end;
+     for i:= 1 to z1 do
+     for j:= 1 to z2 do
+     write(a[i,j]);
+     end;
+     writeln;
+     end;
+end.

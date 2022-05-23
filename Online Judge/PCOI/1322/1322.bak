@@ -1,0 +1,5 @@
+var n,m:longint;
+begin
+     readln(n,m);
+     writeln(exp(n*ln2)-exp(m*ln2):0:0);
+end;

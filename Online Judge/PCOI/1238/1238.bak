@@ -1,0 +1,7 @@
+var n,c,i,j,k:longint;
+    a:array[1..16] of longint;
+begin
+     readln(c,n);
+     for i:= 1 to n do
+     readln(a[i]);
+end.

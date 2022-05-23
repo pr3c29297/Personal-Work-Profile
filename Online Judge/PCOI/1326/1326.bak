@@ -1,0 +1,27 @@
+var a:ansistring;
+    i,j,k:longint;
+begin
+     readln(a);
+     for i:= 1 to length(a)-2 do
+     begin
+          if a[i]=a[i+1] then
+          begin
+               if (a[i]='1') and (a[i+2]='1') then
+               a[i+1]:='0'
+               else if (a[i]='1') and (a[i+2]='0') then
+               a[i]:='0'
+               else if (a[i]='0') and (a[i+2]='0') then
+               a[i+1]:='1'
+               else if (a[i]='1') and (a[i+2]='1') then
+               a[i]:='1';
+               inc(j);
+          end;
+     end;
+     for i:= 1 to length(a)-1 do
+     if a[i]=a[i+1] then
+     inc(k);
+     if k>0 then
+     writeln('-1')
+     else
+     writeln(j);
+end.

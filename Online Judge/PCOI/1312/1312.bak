@@ -1,0 +1,19 @@
+var n,d,i,j,t,c:longint;
+    a:array[1..101] of longint;
+begin
+     readln(n,d);
+     for i:= 1 to n do
+     read(a[i]);
+     for i:= 1 to n do
+     for j:= 1 to n-d do
+     begin
+      if a[j]>a[j+d] then
+      begin
+       t:=a[j];
+       a[j]:=a[j+d];
+       a[j+d]:=t;
+       c:=c+1;
+      end;
+     end;
+     writeln(c);
+end.

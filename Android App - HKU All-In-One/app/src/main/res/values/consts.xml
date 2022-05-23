@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ScheduleFilename">schedule.csv</string>
+    <!-- CSV Position of class schedule -->
+    <integer name="posCourseCode">0</integer>
+    <integer name="posClassSection">1</integer>
+    <integer name="posStartDate">2</integer>
+    <integer name="posEndDate">3</integer>
+    <integer name="posMON">4</integer>
+    <integer name="posTue">5</integer>
+    <integer name="posWed">6</integer>
+    <integer name="posThu">7</integer>
+    <integer name="posFri">8</integer>
+    <integer name="posSat">9</integer>
+    <integer name="posSun">10</integer>
+    <integer name="posVenue">11</integer>
+    <integer name="posStartTime">12</integer>
+    <integer name="posEndTime">13</integer>
+    <integer name="posCourseTitle">14</integer>
+
+
+</resources>

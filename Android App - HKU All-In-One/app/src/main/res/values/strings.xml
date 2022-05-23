@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">COMP7506</string>
+    <string name="tab_text_1">Courses</string>
+    <string name="tab_text_2">COVID-19 Info Hub</string>
+    <string name="tab_text_3">Settings</string>
+    <string name="course_zoom">Zoom!</string>
+    <string name="course_AddtoCalendar">Add to Calendar!</string>
+    <string name="title_activity_main2">MainActivity2</string>
+    <string name="title_activity_fragment">FragmentActivity</string>
+    <string name="title_activity_settings">SettingsActivity</string>
+
+    <!-- Preference Titles -->
+    <string name="Profile_header">Profile</string>
+    <string name="about_header">About</string>
+
+    <!-- Profile Preferences -->
+    <string name="key_username">key_username</string>
+    <string name="username">Student Name</string>
+    <string name="key_logout">key_logout</string>
+    <string name="logout_title">Logout</string>
+
+    <!-- About Preferences -->
+    <string name="about">About</string>
+    <string name="summary_about">Group Assignment of COMP7506 - Group 11</string>
+    <string name="version_title">Version</string>
+    <string name="version">1.0.0</string>
+    <string name="key_send_feedback">key_send_feedback</string>
+    <string name="summary_feedback">Tap to send us feedback</string>
+    <string name="title_send_feedback">Send Feedback</string>
+    <string name="choose_email_client">Choose email client</string>
+    <string name="data_collection_title">Data Collection Policy</string>
+    <string name="url_dpp">https://www.hklii.hk/eng/hk/legis/ord/486/sch1.html</string>
+    <string name="dpp_summary">The app follows the Data Protection Principle (DPPs), tap to view more</string>
+</resources>

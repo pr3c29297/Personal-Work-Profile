@@ -1,0 +1,95 @@
+var a,u,g,temp:array[1..10000] of longint;
+    n,i,j,k,b,s,r:longint;
+procedure mergeu(l,r:longint);
+var p,q:longint;
+begin
+     if l<r then
+     begin
+          mergeu(l,(l+r) div 2);
+          mergeu((l+r) div 2 +1,r);
+          p:=l;
+          q:=(l+r) div 2+1;
+          for i:= l to r do
+          begin
+               if (q>r) or ((p<=(l+r) div 2) and (u[p]<=u[q])) then
+               begin
+                    temp[i]:=u[p];
+                    inc(p);
+               end
+               else
+               begin
+                    temp[i]:=u[q];
+                    inc(q);
+               end;
+          end;
+          for i:= l to r do
+          u[i]:=temp[i];
+     end;
+end;
+procedure mergeg(l,r:longint);
+var p,q:longint;
+begin
+     if l<r then
+     begin
+          mergeg(l,(l+r) div 2);
+          mergeg((l+r) div 2 +1,r);
+          p:=l;
+          q:=(l+r) div 2+1;
+          for i:= l to r do
+          begin
+               if (q>r) or ((p<=(l+r) div 2) and (g[p]<=g[q])) then
+               begin
+                    temp[i]:=g[p];
+                    inc(p);
+               end
+               else
+               begin
+                    temp[i]:=g[q];
+                    inc(q);
+               end;
+          end;
+          for i:= l to r do
+          g[i]:=temp[i];
+     end;
+end;
+begin
+     readln(n);
+     for i:= 1 to n do
+     begin
+          readln(k);
+          inc(a[k]);
+     end;
+     for i:= 1 to 10000 do
+     if a[i]>b then
+     b:=a[i];
+     for i:= 1 to 10000 do
+     if (a[i]>s) and (a[i]<b) then
+     s:=a[i];
+     j:=0;
+     k:=0;
+     for i:= 1 to 10000 do
+     begin
+          if a[i]=b then
+          begin
+               inc(j);
+               u[j]:=i;
+          end;
+          if a[i]=s then
+          begin
+               inc(k);
+               g[k]:=i;
+          end;
+     end;
+     if s=0 then
+     begin
+          writeln(u[j]-u[1]);
+          halt;
+     end;
+     mergeu(1,j);
+     mergeg(1,k);
+     r:=abs(u[j]-g[1]);
+     if r>=abs(u[1]-g[k]) then
+     writeln(r)
+     else
+     writeln(abs(u[1]-g[k]));
+end.

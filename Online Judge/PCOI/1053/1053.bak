@@ -1,0 +1,28 @@
+var n,i,j,temp:longint;
+    s:string;
+    a:array[1..100000] of longint;
+begin
+      j:=1;
+      while not (eof) do
+      begin
+       readln(s);
+       if s[1]='E' then
+       begin
+        i:=i+1;
+        val(copy(s,2,length(s)-1),a[i],temp);
+       end;
+       if s[1]='D' then
+       begin
+        if i>0 then
+        begin
+        a[j]:=0;
+        j:=j+1;
+        end;
+       end;
+       s:='';
+      end;
+       for j:= 1 to i do
+        n:=n+a[j];
+       writeln(n);
+
+end.

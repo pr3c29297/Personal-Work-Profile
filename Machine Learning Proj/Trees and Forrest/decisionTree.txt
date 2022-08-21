@@ -1,0 +1,1630 @@
+ModifiedCreditScore <= 633.5 : 
+ DTI <= 0.393135 : 
+  VehicleMake = UNDECIDED : 
+  	TotalMonthlyIncome <= 2724.58 : Declined
+  	TotalMonthlyIncome > 2724.58 : 
+  	    EstimatedMonthlyPayment <= 268.095 : 
+  	     OccupancyStatus = RENT : 
+  	     	ModifiedBankruptcyScore <= 276.5 : 
+  	     	 Loanterm <= 69.0 : Declined
+  	     	 Loanterm > 69.0 : Approved
+  	     	ModifiedBankruptcyScore > 276.5 : Approved
+  	     OccupancyStatus = LIVEWITHPARENTS : 
+  	     	EmployedMonths <= 13.0 : Declined
+  	     	EmployedMonths > 13.0 : Approved
+  	     OccupancyStatus = BUYING : Declined
+  	     OccupancyStatus = OWN : Declined
+  	     OccupancyStatus = OTHER : Declined
+  	    EstimatedMonthlyPayment > 268.095 : 
+  	        OccupancyDuration <= 93.0 : Declined
+  	        OccupancyDuration > 93.0 : 
+  	            NumberOfOpenRevolvingAccounts <= 2.5 : Declined
+  	            NumberOfOpenRevolvingAccounts > 2.5 : 
+  	                CoApplicantIndicator = N : 
+  	                	AmountRequested <= 15750.0 : 
+  	                	 TotalMonthlyDebtBeforeLoan <= 789.0 : Approved
+  	                	 TotalMonthlyDebtBeforeLoan > 789.0 : Declined
+  	                	AmountRequested > 15750.0 : Declined
+  	                CoApplicantIndicator = Y : Approved
+  VehicleMake = NISSAN : 
+  	EstimatedMonthlyPayment <= 334.605 : 
+  	 LTV <= 0.7949 : 
+  	  RequestType = INDIRECT : 
+  	  	NumberOfOpenRevolvingAccounts <= 2.0 : Declined
+  	  	NumberOfOpenRevolvingAccounts > 2.0 : Approved
+  	  RequestType = REFINANCE : Declined
+  	  RequestType = REFINANCE-PROMO : Approved
+  	 LTV > 0.7949 : Declined
+  	EstimatedMonthlyPayment > 334.605 : 
+  	    OccupancyStatus = RENT : 
+  	    	VehicleMileage <= 4.5 : 
+  	    	 CoApplicantIndicator = N : Approved
+  	    	 CoApplicantIndicator = Y : Declined
+  	    	VehicleMileage > 4.5 : Declined
+  	    OccupancyStatus = LIVEWITHPARENTS : 
+  	    	LTV <= 1.03905 : Declined
+  	    	LTV > 1.03905 : 
+  	    	    OccupancyDuration <= 42.0 : 
+  	    	     TotalMonthlyIncome <= 2395.835 : 
+  	    	      DownPayment <= 1427.5 : Approved
+  	    	      DownPayment > 1427.5 : Declined
+  	    	     TotalMonthlyIncome > 2395.835 : Declined
+  	    	    OccupancyDuration > 42.0 : 
+  	    	        DownPayment <= 1500.0 : Approved
+  	    	        DownPayment > 1500.0 : Declined
+  	    OccupancyStatus = BUYING : 
+  	    	NumberOfOpenRevolvingAccounts <= 3.5 : Declined
+  	    	NumberOfOpenRevolvingAccounts > 3.5 : 
+  	    	    Loanterm <= 73.5 : 
+  	    	     OccupancyDuration <= 54.0 : Declined
+  	    	     OccupancyDuration > 54.0 : Approved
+  	    	    Loanterm > 73.5 : Approved
+  	    OccupancyStatus = OTHER : 
+  	    	RequestType = CAR SALE : 
+  	    		LTV <= 1.0227 : Approved
+  	    		LTV > 1.0227 : Declined
+  	    	RequestType = REFINANCE : Approved
+  	    	RequestType = INDIRECT : Declined
+  	    	RequestType = REFINANCE-PROMO : Declined
+  	    OccupancyStatus = OWN : 
+  	    	VehicleMileage <= 36569.0 : Declined
+  	    	VehicleMileage > 36569.0 : Approved
+  VehicleMake = TOYOTA : 
+  	Source = GATEWAY : 
+  		EstimatedMonthlyPayment <= 248.555 : Declined
+  		EstimatedMonthlyPayment > 248.555 : 
+  		    VehicleMileage <= 32669.5 : 
+  		     AmountRequested <= 25171.0 : Declined
+  		     AmountRequested > 25171.0 : 
+  		         TotalMonthlyDebtBeforeLoan <= 1096.0 : 
+  		          OccupancyStatus = LIVEWITHPARENTS : 
+  		          	LTV <= 1.1909 : Declined
+  		          	LTV > 1.1909 : Approved
+  		          OccupancyStatus = RENT : 
+  		          	LTV <= 1.0356 : 
+  		          	 NumberOfOpenRevolvingAccounts <= 0.5 : Declined
+  		          	 NumberOfOpenRevolvingAccounts > 0.5 : Approved
+  		          	LTV > 1.0356 : Declined
+  		          OccupancyStatus = OWN : 
+  		          	NumberOfOpenRevolvingAccounts <= 2.0 : Approved
+  		          	NumberOfOpenRevolvingAccounts > 2.0 : Declined
+  		          OccupancyStatus = BUYING : Approved
+  		         TotalMonthlyDebtBeforeLoan > 1096.0 : Declined
+  		    VehicleMileage > 32669.5 : 
+  		        LTV <= 1.08825 : 
+  		         PrimeMonthlyLiability <= 407.5 : 
+  		          NumberOfOpenRevolvingAccounts <= 1.5 : Declined
+  		          NumberOfOpenRevolvingAccounts > 1.5 : 
+  		              ModifiedBankruptcyScore <= 291.5 : Declined
+  		              ModifiedBankruptcyScore > 291.5 : Approved
+  		         PrimeMonthlyLiability > 407.5 : Approved
+  		        LTV > 1.08825 : Declined
+  	Source = LENDER : 
+  		LTV <= 1.0566499999999999 : Approved
+  		LTV > 1.0566499999999999 : 
+  		    NumberOfOpenRevolvingAccounts <= 1.5 : Approved
+  		    NumberOfOpenRevolvingAccounts > 1.5 : Declined
+  	Source = CONSUMER : Declined
+  VehicleMake = HYUNDAI : 
+  	TotalMonthlyDebtBeforeLoan <= 323.0 : Declined
+  	TotalMonthlyDebtBeforeLoan > 323.0 : 
+  	    LTV <= 1.01155 : 
+  	     Loanterm <= 73.5 : 
+  	      ModifiedBankruptcyScore <= 302.5 : Declined
+  	      ModifiedBankruptcyScore > 302.5 : 
+  	          AmountRequested <= 13337.0 : Declined
+  	          AmountRequested > 13337.0 : 
+  	              VehicleMileage <= 30443.5 : 
+  	               OccupancyDuration <= 21.0 : Approved
+  	               OccupancyDuration > 21.0 : Declined
+  	              VehicleMileage > 30443.5 : Approved
+  	     Loanterm > 73.5 : 
+  	         MemberIndicator = N : Approved
+  	         MemberIndicator = Y : 
+  	         	CoApplicantIndicator = N : Approved
+  	         	CoApplicantIndicator = Y : Declined
+  	    LTV > 1.01155 : 
+  	        PrimeMonthlyLiability <= 326.5 : 
+  	         VehicleMileage <= 14465.5 : 
+  	          ModifiedBankruptcyScore <= 291.5 : Approved
+  	          ModifiedBankruptcyScore > 291.5 : 
+  	              DownPayment <= 475.0 : Approved
+  	              DownPayment > 475.0 : Declined
+  	         VehicleMileage > 14465.5 : Declined
+  	        PrimeMonthlyLiability > 326.5 : Declined
+  VehicleMake = CHEVROLET : 
+  	PrimeMonthlyRent <= 275.0 : 
+  	 OccupancyDuration <= 3.0 : Approved
+  	 OccupancyDuration > 3.0 : Declined
+  	PrimeMonthlyRent > 275.0 : 
+  	    EmployedMonths <= 62.0 : 
+  	     RequestType = INDIRECT : 
+  	     	OccupancyStatus = RENT : Declined
+  	     	OccupancyStatus = LIVEWITHPARENTS : 
+  	     		DownPayment <= 1100.0 : 
+  	     		 OccupancyDuration <= 186.0 : 
+  	     		  EstimatedMonthlyPayment <= 353.36 : Declined
+  	     		  EstimatedMonthlyPayment > 353.36 : Approved
+  	     		 OccupancyDuration > 186.0 : Approved
+  	     		DownPayment > 1100.0 : Declined
+  	     	OccupancyStatus = OTHER : Declined
+  	     RequestType = DEALER PURCHASE : 
+  	     	TotalMonthlyIncome <= 4011.665 : Declined
+  	     	TotalMonthlyIncome > 4011.665 : Approved
+  	     RequestType = CAR SALE : 
+  	     	EstimatedMonthlyPayment <= 455.26 : Declined
+  	     	EstimatedMonthlyPayment > 455.26 : Approved
+  	     RequestType = REFINANCE-PROMO : Declined
+  	     RequestType = REFINANCE : 
+  	     	MemberIndicator = Y : Declined
+  	     	MemberIndicator = N : Approved
+  	    EmployedMonths > 62.0 : 
+  	        AmountRequested <= 26746.5 : 
+  	         VehicleMileage <= 32076.5 : Approved
+  	         VehicleMileage > 32076.5 : 
+  	             TotalMonthlyIncome <= 5155.33 : Declined
+  	             TotalMonthlyIncome > 5155.33 : Approved
+  	        AmountRequested > 26746.5 : Declined
+  VehicleMake = FORD : 
+  	NumberOfOpenRevolvingAccounts <= 0.5 : Declined
+  	NumberOfOpenRevolvingAccounts > 0.5 : 
+  	    isNewVehicle = N : 
+  	    	EstimatedMonthlyPayment <= 253.015 : Declined
+  	    	EstimatedMonthlyPayment > 253.015 : 
+  	    	    ModifiedBankruptcyScore <= 204.5 : 
+  	    	     DownPayment <= 3750.0 : Declined
+  	    	     DownPayment > 3750.0 : Approved
+  	    	    ModifiedBankruptcyScore > 204.5 : 
+  	    	        TotalVehicleValue <= 29475.0 : 
+  	    	         DownPayment <= 2750.0 : 
+  	    	          RequestType = INDIRECT : 
+  	    	          	LTV <= 1.0261 : Approved
+  	    	          	LTV > 1.0261 : 
+  	    	          	    Loanterm <= 69.0 : Approved
+  	    	          	    Loanterm > 69.0 : 
+  	    	          	        AmountRequested <= 32843.0 : Declined
+  	    	          	        AmountRequested > 32843.0 : Approved
+  	    	          RequestType = DEALER PURCHASE : 
+  	    	          	CoApplicantIndicator = Y : Approved
+  	    	          	CoApplicantIndicator = N : Declined
+  	    	          RequestType = PRIVATE PARTY : Declined
+  	    	          RequestType = REFINANCE-PROMO : Approved
+  	    	          RequestType = CAR SALE : Approved
+  	    	         DownPayment > 2750.0 : Declined
+  	    	        TotalVehicleValue > 29475.0 : Declined
+  	    isNewVehicle = Y : Declined
+  VehicleMake = KIA : 
+  	NumberOfOpenRevolvingAccounts <= 2.5 : 
+  	 OccupancyStatus = RENT : Declined
+  	 OccupancyStatus = LIVEWITHPARENTS : 
+  	 	EmployedMonths <= 8.5 : Approved
+  	 	EmployedMonths > 8.5 : Declined
+  	 OccupancyStatus = BUYING : 
+  	 	LTV <= 1.05255 : 
+  	 	 EstimatedMonthlyPayment <= 270.28499999999997 : Declined
+  	 	 EstimatedMonthlyPayment > 270.28499999999997 : Approved
+  	 	LTV > 1.05255 : Declined
+  	 OccupancyStatus = OWN : Declined
+  	 OccupancyStatus = OTHER : Declined
+  	NumberOfOpenRevolvingAccounts > 2.5 : 
+  	    ModifiedBankruptcyScore <= 258.5 : Declined
+  	    ModifiedBankruptcyScore > 258.5 : 
+  	        TotalVehicleValue <= 18917.5 : 
+  	         EstimatedMonthlyPayment <= 300.91499999999996 : 
+  	          CoApplicantIndicator = Y : Declined
+  	          CoApplicantIndicator = N : Approved
+  	         EstimatedMonthlyPayment > 300.91499999999996 : Declined
+  	        TotalVehicleValue > 18917.5 : 
+  	            OccupancyDuration <= 61.0 : 
+  	             AmountRequested <= 29992.0 : Approved
+  	             AmountRequested > 29992.0 : Declined
+  	            OccupancyDuration > 61.0 : Declined
+  VehicleMake = MAZDA : 
+  	EstimatedMonthlyPayment <= 280.75 : Declined
+  	EstimatedMonthlyPayment > 280.75 : 
+  	    AmountRequested <= 13010.0 : Approved
+  	    AmountRequested > 13010.0 : 
+  	        PrimeMonthlyRent <= 275.0 : Declined
+  	        PrimeMonthlyRent > 275.0 : 
+  	            TotalMonthlyIncome <= 2869.0 : Declined
+  	            TotalMonthlyIncome > 2869.0 : 
+  	                TotalMonthlyDebtBeforeLoan <= 533.3 : 
+  	                 LTV <= 1.20925 : Approved
+  	                 LTV > 1.20925 : Declined
+  	                TotalMonthlyDebtBeforeLoan > 533.3 : 
+  	                    EmployedMonths <= 67.5 : 
+  	                     OccupancyDuration <= 13.0 : 
+  	                      VehicleMileage <= 31.5 : Approved
+  	                      VehicleMileage > 31.5 : Declined
+  	                     OccupancyDuration > 13.0 : Declined
+  	                    EmployedMonths > 67.5 : Approved
+  VehicleMake = OTHERS : 
+  	RequestType = INDIRECT : 
+  		TotalMonthlyIncome <= 1768.335 : 
+  		 LTV <= 1.03195 : Declined
+  		 LTV > 1.03195 : Approved
+  		TotalMonthlyIncome > 1768.335 : Declined
+  	RequestType = REFINANCE : Declined
+  	RequestType = DEALER PURCHASE : Approved
+  	RequestType = REFINANCE-PROMO : Declined
+  	RequestType = PRIVATE PARTY : Approved
+  VehicleMake = DODGE : 
+  	RequestType = INDIRECT : 
+  		Loanterm <= 73.5 : Declined
+  		Loanterm > 73.5 : 
+  		    TotalMonthlyIncome <= 4700.0 : 
+  		     EstimatedMonthlyPayment <= 514.12 : 
+  		      TotalMonthlyDebtBeforeLoan <= 878.0 : Declined
+  		      TotalMonthlyDebtBeforeLoan > 878.0 : Approved
+  		     EstimatedMonthlyPayment > 514.12 : Approved
+  		    TotalMonthlyIncome > 4700.0 : Declined
+  	RequestType = REFINANCE-PROMO : Declined
+  	RequestType = DEALER PURCHASE : 
+  		LTV <= 1.28375 : Approved
+  		LTV > 1.28375 : Declined
+  	RequestType = CAR SALE : 
+  		LTV <= 1.0106 : Approved
+  		LTV > 1.0106 : Declined
+  	RequestType = REFINANCE : Declined
+  VehicleMake = HONDA : 
+  	MemberIndicator = N : Declined
+  	MemberIndicator = Y : 
+  		RequestType = DEALER PURCHASE : 
+  			CoApplicantIndicator = N : Declined
+  			CoApplicantIndicator = Y : Approved
+  		RequestType = REFINANCE : 
+  			LTV <= 1.03325 : Approved
+  			LTV > 1.03325 : Declined
+  		RequestType = INDIRECT : Approved
+  		RequestType = REFINANCE-PROMO : Declined
+  		RequestType = LEASE BUYOUT : Declined
+  VehicleMake = CHRYSLER : 
+  	PrimeMonthlyRent <= 525.0 : Declined
+  	PrimeMonthlyRent > 525.0 : 
+  	    DownPayment <= 600.0 : 
+  	     RequestType = INDIRECT : Approved
+  	     RequestType = REFINANCE : Declined
+  	     RequestType = REFINANCE-PROMO : Approved
+  	    DownPayment > 600.0 : Declined
+  VehicleMake = JEEP : 
+  	NumberOfOpenRevolvingAccounts <= 1.5 : Declined
+  	NumberOfOpenRevolvingAccounts > 1.5 : 
+  	    VehicleMileage <= 23.0 : Declined
+  	    VehicleMileage > 23.0 : 
+  	        LTV <= 0.9767 : Approved
+  	        LTV > 0.9767 : 
+  	            OccupancyDuration <= 114.0 : Declined
+  	            OccupancyDuration > 114.0 : 
+  	                EstimatedMonthlyPayment <= 635.7650000000001 : Approved
+  	                EstimatedMonthlyPayment > 635.7650000000001 : Declined
+  VehicleMake = VOLKSWAGEN : 
+  	DownPayment <= 250.0 : 
+  	 LTV <= 0.70095 : Approved
+  	 LTV > 0.70095 : 
+  	     OccupancyDuration <= 52.0 : Declined
+  	     OccupancyDuration > 52.0 : Approved
+  	DownPayment > 250.0 : Declined
+  VehicleMake = MITSUBISHI : 
+  	TotalMonthlyDebtBeforeLoan <= 958.745 : Declined
+  	TotalMonthlyDebtBeforeLoan > 958.745 : 
+  	    TotalVehicleValue <= 22465.0 : 
+  	     NumberOfOpenRevolvingAccounts <= 2.5 : Approved
+  	     NumberOfOpenRevolvingAccounts > 2.5 : Declined
+  	    TotalVehicleValue > 22465.0 : Declined
+  VehicleMake = RAM : 
+  	TotalMonthlyIncome <= 9579.0 : Declined
+  	TotalMonthlyIncome > 9579.0 : Approved
+  VehicleMake = MERCEDES-BENZ : 
+  	DownPayment <= 3500.0 : Declined
+  	DownPayment > 3500.0 : 
+  	    LTV <= 1.0239500000000001 : Approved
+  	    LTV > 1.0239500000000001 : Declined
+  VehicleMake = BUICK : 
+  	OccupancyStatus = LIVEWITHPARENTS : 
+  		PrimeMonthlyRent <= 375.0 : Declined
+  		PrimeMonthlyRent > 375.0 : Approved
+  	OccupancyStatus = RENT : Declined
+  	OccupancyStatus = OWN : Declined
+  	OccupancyStatus = BUYING : Approved
+  	OccupancyStatus = OTHER : Approved
+  VehicleMake = INFINITI : 
+  	EstimatedMonthlyPayment <= 368.915 : 
+  	 TotalMonthlyDebtBeforeLoan <= 636.365 : Declined
+  	 TotalMonthlyDebtBeforeLoan > 636.365 : Approved
+  	EstimatedMonthlyPayment > 368.915 : Declined
+  VehicleMake = GMC : Declined
+  VehicleMake = ACURA : 
+  	LTV <= 0.8254999999999999 : Approved
+  	LTV > 0.8254999999999999 : 
+  	    Loanterm <= 78.0 : Declined
+  	    Loanterm > 78.0 : Approved
+  VehicleMake = BMW : Declined
+  VehicleMake = SUBARU : Declined
+  VehicleMake = LEXUS : 
+  	LTV <= 1.05485 : Declined
+  	LTV > 1.05485 : Approved
+ DTI > 0.393135 : 
+     EmployedMonths <= 318.0 : Declined
+     EmployedMonths > 318.0 : 
+         RequestType = INDIRECT : Approved
+         RequestType = PRIVATE PARTY : Declined
+         RequestType = REFINANCE-PROMO : Declined
+         RequestType = CAR SALE : Declined
+ModifiedCreditScore > 633.5 : 
+    DTI <= 0.481035 : 
+     MemberIndicator = N : 
+     	VehicleMileage <= 99583.5 : 
+     	 LTV <= 0.80125 : 
+     	  VehicleMake = CHEVROLET : 
+     	  	TotalVehicleValue <= 23890.0 : 
+     	  	 OccupancyStatus = RENT : 
+     	  	 	EstimatedMonthlyPayment <= 234.25 : Declined
+     	  	 	EstimatedMonthlyPayment > 234.25 : Approved
+     	  	 OccupancyStatus = LIVEWITHPARENTS : Declined
+     	  	 OccupancyStatus = OWN : Approved
+     	  	 OccupancyStatus = OTHER : Approved
+     	  	 OccupancyStatus = BUYING : Declined
+     	  	TotalVehicleValue > 23890.0 : Approved
+     	  VehicleMake = NISSAN : 
+     	  	NumberOfOpenRevolvingAccounts <= 0.5 : Declined
+     	  	NumberOfOpenRevolvingAccounts > 0.5 : 
+     	  	    TotalMonthlyDebtBeforeLoan <= 2275.5 : Approved
+     	  	    TotalMonthlyDebtBeforeLoan > 2275.5 : 
+     	  	        PrimeMonthlyLiability <= 2577.5 : Declined
+     	  	        PrimeMonthlyLiability > 2577.5 : Approved
+     	  VehicleMake = TOYOTA : 
+     	  	NumberOfOpenRevolvingAccounts <= 8.5 : 
+     	  	 OccupancyDuration <= 222.0 : Approved
+     	  	 OccupancyDuration > 222.0 : Declined
+     	  	NumberOfOpenRevolvingAccounts > 8.5 : Declined
+     	  VehicleMake = MAZDA : 
+     	  	ModifiedBankruptcyScore <= 423.5 : Approved
+     	  	ModifiedBankruptcyScore > 423.5 : 
+     	  	    NumberOfOpenRevolvingAccounts <= 3.0 : Approved
+     	  	    NumberOfOpenRevolvingAccounts > 3.0 : Declined
+     	  VehicleMake = FORD : 
+     	  	OccupancyStatus = BUYING : Approved
+     	  	OccupancyStatus = LIVEWITHPARENTS : 
+     	  		NumberOfOpenRevolvingAccounts <= 3.0 : Declined
+     	  		NumberOfOpenRevolvingAccounts > 3.0 : Approved
+     	  	OccupancyStatus = OWN : Approved
+     	  	OccupancyStatus = RENT : Approved
+     	  VehicleMake = HYUNDAI : 
+     	  	OccupancyDuration <= 144.0 : Approved
+     	  	OccupancyDuration > 144.0 : 
+     	  	    NumberOfOpenRevolvingAccounts <= 9.0 : Approved
+     	  	    NumberOfOpenRevolvingAccounts > 9.0 : Declined
+     	  VehicleMake = JEEP : 
+     	  	ModifiedBankruptcyScore <= 241.5 : Declined
+     	  	ModifiedBankruptcyScore > 241.5 : Approved
+     	  VehicleMake = GMC : 
+     	  	NumberOfOpenRevolvingAccounts <= 11.0 : Approved
+     	  	NumberOfOpenRevolvingAccounts > 11.0 : Declined
+     	  VehicleMake = RAM : 
+     	  	EstimatedMonthlyPayment <= 440.8 : 
+     	  	 OccupancyDuration <= 246.5 : Declined
+     	  	 OccupancyDuration > 246.5 : Approved
+     	  	EstimatedMonthlyPayment > 440.8 : Approved
+     	  VehicleMake = BUICK : 
+     	  	EstimatedMonthlyPayment <= 274.25 : 
+     	  	 AmountRequested <= 16198.0 : Approved
+     	  	 AmountRequested > 16198.0 : Declined
+     	  	EstimatedMonthlyPayment > 274.25 : Approved
+     	  VehicleMake = HONDA : 
+     	  	TotalMonthlyIncome <= 3100.0 : Declined
+     	  	TotalMonthlyIncome > 3100.0 : Approved
+     	  VehicleMake = KIA : 
+     	  	VehicleYear <= 4.5 : Approved
+     	  	VehicleYear > 4.5 : Declined
+     	  VehicleMake = DODGE : 
+     	  	ModifiedBankruptcyScore <= 198.5 : Declined
+     	  	ModifiedBankruptcyScore > 198.5 : Approved
+     	  VehicleMake = CHRYSLER : Approved
+     	  VehicleMake = OTHERS : Approved
+     	  VehicleMake = VOLKSWAGEN : Approved
+     	  VehicleMake = MERCEDES-BENZ : Approved
+     	  VehicleMake = ACURA : Approved
+     	  VehicleMake = BMW : Approved
+     	  VehicleMake = UNDECIDED : Approved
+     	  VehicleMake = SUBARU : 
+     	  	NumberOfOpenRevolvingAccounts <= 6.0 : Declined
+     	  	NumberOfOpenRevolvingAccounts > 6.0 : Approved
+     	  VehicleMake = LEXUS : Approved
+     	  VehicleMake = INFINITI : Declined
+     	 LTV > 0.80125 : 
+     	     Loanterm <= 73.0 : 
+     	      OccupancyStatus = RENT : 
+     	      	VehicleMake = NISSAN : 
+     	      		TotalMonthlyDebtBeforeLoan <= 768.5 : 
+     	      		 NumberOfOpenRevolvingAccounts <= 2.5 : 
+     	      		  EstimatedMonthlyPayment <= 286.88 : Declined
+     	      		  EstimatedMonthlyPayment > 286.88 : 
+     	      		      RequestType = CAR SALE : Approved
+     	      		      RequestType = INDIRECT : Approved
+     	      		      RequestType = REFINANCE : Declined
+     	      		 NumberOfOpenRevolvingAccounts > 2.5 : Approved
+     	      		TotalMonthlyDebtBeforeLoan > 768.5 : 
+     	      		    RequestType = INDIRECT : 
+     	      		    	OccupancyDuration <= 53.5 : 
+     	      		    	 PrimeMonthlyLiability <= 720.78 : Declined
+     	      		    	 PrimeMonthlyLiability > 720.78 : 
+     	      		    	     VehicleYear <= 3.5 : Declined
+     	      		    	     VehicleYear > 3.5 : Approved
+     	      		    	OccupancyDuration > 53.5 : Approved
+     	      		    RequestType = CAR SALE : Declined
+     	      		    RequestType = REFINANCE : Declined
+     	      		    RequestType = DEALER PURCHASE : Approved
+     	      	VehicleMake = CHEVROLET : 
+     	      		ModifiedBankruptcyScore <= 275.5 : Declined
+     	      		ModifiedBankruptcyScore > 275.5 : 
+     	      		    TotalVehicleValue <= 16800.0 : Approved
+     	      		    TotalVehicleValue > 16800.0 : 
+     	      		        EstimatedMonthlyPayment <= 363.58500000000004 : Declined
+     	      		        EstimatedMonthlyPayment > 363.58500000000004 : 
+     	      		            DownPayment <= 2250.0 : 
+     	      		             EmployedMonths <= 13.0 : Declined
+     	      		             EmployedMonths > 13.0 : Approved
+     	      		            DownPayment > 2250.0 : Declined
+     	      	VehicleMake = FORD : 
+     	      		PrimeMonthlyRent <= 480.0 : 
+     	      		 VehicleYear <= 1.5 : Declined
+     	      		 VehicleYear > 1.5 : Approved
+     	      		PrimeMonthlyRent > 480.0 : 
+     	      		    NumberOfOpenRevolvingAccounts <= 0.5 : Approved
+     	      		    NumberOfOpenRevolvingAccounts > 0.5 : 
+     	      		        EmployedMonths <= 31.5 : 
+     	      		         DownPayment <= 1500.0 : 
+     	      		          EstimatedMonthlyPayment <= 222.785 : Approved
+     	      		          EstimatedMonthlyPayment > 222.785 : Declined
+     	      		         DownPayment > 1500.0 : Approved
+     	      		        EmployedMonths > 31.5 : Declined
+     	      	VehicleMake = HYUNDAI : 
+     	      		OccupancyDuration <= 19.5 : Declined
+     	      		OccupancyDuration > 19.5 : 
+     	      		    DownPayment <= 1100.0 : 
+     	      		     EstimatedMonthlyPayment <= 244.29000000000002 : Approved
+     	      		     EstimatedMonthlyPayment > 244.29000000000002 : 
+     	      		         AmountRequested <= 32153.5 : Declined
+     	      		         AmountRequested > 32153.5 : Approved
+     	      		    DownPayment > 1100.0 : Approved
+     	      	VehicleMake = TOYOTA : 
+     	      		TotalMonthlyIncome <= 4533.335 : 
+     	      		 ModifiedBankruptcyScore <= 401.0 : 
+     	      		  TotalMonthlyDebtBeforeLoan <= 1146.0 : 
+     	      		   PrimeMonthlyLiability <= 51.0 : Declined
+     	      		   PrimeMonthlyLiability > 51.0 : 
+     	      		       OccupancyDuration <= 8.5 : 
+     	      		        DownPayment <= 1750.0 : Declined
+     	      		        DownPayment > 1750.0 : Approved
+     	      		       OccupancyDuration > 8.5 : Approved
+     	      		  TotalMonthlyDebtBeforeLoan > 1146.0 : Declined
+     	      		 ModifiedBankruptcyScore > 401.0 : Approved
+     	      		TotalMonthlyIncome > 4533.335 : Declined
+     	      	VehicleMake = HONDA : 
+     	      		EstimatedMonthlyPayment <= 235.695 : Declined
+     	      		EstimatedMonthlyPayment > 235.695 : 
+     	      		    TotalMonthlyIncome <= 5977.5 : 
+     	      		     TotalMonthlyDebtBeforeLoan <= 860.77 : 
+     	      		      ModifiedBankruptcyScore <= 349.5 : Declined
+     	      		      ModifiedBankruptcyScore > 349.5 : 
+     	      		          NumberOfOpenRevolvingAccounts <= 1.5 : Declined
+     	      		          NumberOfOpenRevolvingAccounts > 1.5 : Approved
+     	      		     TotalMonthlyDebtBeforeLoan > 860.77 : Approved
+     	      		    TotalMonthlyIncome > 5977.5 : Declined
+     	      	VehicleMake = KIA : 
+     	      		AmountRequested <= 12269.0 : Approved
+     	      		AmountRequested > 12269.0 : 
+     	      		    EmployedMonths <= 25.5 : Declined
+     	      		    EmployedMonths > 25.5 : 
+     	      		        DownPayment <= 250.0 : Approved
+     	      		        DownPayment > 250.0 : 
+     	      		            TotalMonthlyDebtBeforeLoan <= 659.875 : 
+     	      		             ModifiedBankruptcyScore <= 335.0 : Approved
+     	      		             ModifiedBankruptcyScore > 335.0 : Declined
+     	      		            TotalMonthlyDebtBeforeLoan > 659.875 : Declined
+     	      	VehicleMake = MAZDA : 
+     	      		PrimeMonthlyRent <= 549.5 : 
+     	      		 ModifiedBankruptcyScore <= 313.0 : Approved
+     	      		 ModifiedBankruptcyScore > 313.0 : 
+     	      		     AmountRequested <= 11879.0 : Approved
+     	      		     AmountRequested > 11879.0 : 
+     	      		         TotalVehicleValue <= 30227.5 : Declined
+     	      		         TotalVehicleValue > 30227.5 : Approved
+     	      		PrimeMonthlyRent > 549.5 : Declined
+     	      	VehicleMake = DODGE : 
+     	      		TotalMonthlyIncome <= 4470.0 : Approved
+     	      		TotalMonthlyIncome > 4470.0 : 
+     	      		    RequestType = INDIRECT : Declined
+     	      		    RequestType = REFINANCE-PROMO : Declined
+     	      		    RequestType = REFINANCE : Approved
+     	      		    RequestType = DEALER PURCHASE : Approved
+     	      		    RequestType = CAR SALE : Declined
+     	      	VehicleMake = UNDECIDED : 
+     	      		TotalMonthlyDebtBeforeLoan <= 1645.46 : 
+     	      		 AmountRequested <= 9250.0 : Declined
+     	      		 AmountRequested > 9250.0 : 
+     	      		     EstimatedMonthlyPayment <= 94.77 : Declined
+     	      		     EstimatedMonthlyPayment > 94.77 : 
+     	      		         TotalMonthlyIncome <= 2057.0 : Declined
+     	      		         TotalMonthlyIncome > 2057.0 : Approved
+     	      		TotalMonthlyDebtBeforeLoan > 1645.46 : Declined
+     	      	VehicleMake = JEEP : 
+     	      		TotalMonthlyDebtBeforeLoan <= 1116.1399999999999 : 
+     	      		 NumberOfOpenRevolvingAccounts <= 3.5 : 
+     	      		  ModifiedBankruptcyScore <= 335.0 : Declined
+     	      		  ModifiedBankruptcyScore > 335.0 : Approved
+     	      		 NumberOfOpenRevolvingAccounts > 3.5 : Approved
+     	      		TotalMonthlyDebtBeforeLoan > 1116.1399999999999 : Declined
+     	      	VehicleMake = CHRYSLER : 
+     	      		EstimatedMonthlyPayment <= 220.69 : Approved
+     	      		EstimatedMonthlyPayment > 220.69 : Declined
+     	      	VehicleMake = OTHERS : 
+     	      		DownPayment <= 400.0 : Approved
+     	      		DownPayment > 400.0 : 
+     	      		    EmployedMonths <= 96.0 : Declined
+     	      		    EmployedMonths > 96.0 : Approved
+     	      	VehicleMake = VOLKSWAGEN : 
+     	      		PrimeMonthlyLiability <= 138.5 : Approved
+     	      		PrimeMonthlyLiability > 138.5 : Declined
+     	      	VehicleMake = MITSUBISHI : Declined
+     	      	VehicleMake = BUICK : 
+     	      		NumberOfOpenRevolvingAccounts <= 4.5 : Declined
+     	      		NumberOfOpenRevolvingAccounts > 4.5 : Approved
+     	      	VehicleMake = INFINITI : 
+     	      		RequestType = INDIRECT : Declined
+     	      		RequestType = REFINANCE-PROMO : Approved
+     	      	VehicleMake = RAM : Declined
+     	      	VehicleMake = ACURA : 
+     	      		CoApplicantIndicator = N : Approved
+     	      		CoApplicantIndicator = Y : Declined
+     	      	VehicleMake = LEXUS : 
+     	      		RequestType = INDIRECT : Approved
+     	      		RequestType = PRIVATE PARTY : Declined
+     	      	VehicleMake = MERCEDES-BENZ : 
+     	      		RequestType = REFINANCE-PROMO : Approved
+     	      		RequestType = INDIRECT : Declined
+     	      	VehicleMake = GMC : Declined
+     	      	VehicleMake = SUBARU : Declined
+     	      OccupancyStatus = BUYING : 
+     	      	VehicleMake = FORD : 
+     	      		EstimatedMonthlyPayment <= 557.5450000000001 : 
+     	      		 NumberOfOpenRevolvingAccounts <= 3.0 : 
+     	      		  CoApplicantIndicator = N : 
+     	      		  	VehicleYear <= 7.5 : Approved
+     	      		  	VehicleYear > 7.5 : Declined
+     	      		  CoApplicantIndicator = Y : Declined
+     	      		 NumberOfOpenRevolvingAccounts > 3.0 : Approved
+     	      		EstimatedMonthlyPayment > 557.5450000000001 : 
+     	      		    TotalVehicleValue <= 41991.5 : Declined
+     	      		    TotalVehicleValue > 41991.5 : 
+     	      		        TotalMonthlyIncome <= 5708.5 : Declined
+     	      		        TotalMonthlyIncome > 5708.5 : Approved
+     	      	VehicleMake = CHEVROLET : 
+     	      		EmployedMonths <= 18.0 : Declined
+     	      		EmployedMonths > 18.0 : 
+     	      		    ModifiedBankruptcyScore <= 267.5 : 
+     	      		     OccupancyDuration <= 87.0 : 
+     	      		      NumberOfOpenRevolvingAccounts <= 5.5 : Declined
+     	      		      NumberOfOpenRevolvingAccounts > 5.5 : 
+     	      		          EstimatedMonthlyPayment <= 822.8 : Approved
+     	      		          EstimatedMonthlyPayment > 822.8 : Declined
+     	      		     OccupancyDuration > 87.0 : Approved
+     	      		    ModifiedBankruptcyScore > 267.5 : Approved
+     	      	VehicleMake = HYUNDAI : 
+     	      		OccupancyDuration <= 150.0 : 
+     	      		 RequestType = INDIRECT : Approved
+     	      		 RequestType = CAR SALE : Approved
+     	      		 RequestType = REFINANCE-PROMO : Declined
+     	      		OccupancyDuration > 150.0 : 
+     	      		    isNewVehicle = N : Declined
+     	      		    isNewVehicle = Y : Approved
+     	      	VehicleMake = UNDECIDED : 
+     	      		OccupancyDuration <= 228.0 : Approved
+     	      		OccupancyDuration > 228.0 : Declined
+     	      	VehicleMake = HONDA : 
+     	      		TotalMonthlyIncome <= 2419.0 : Declined
+     	      		TotalMonthlyIncome > 2419.0 : Approved
+     	      	VehicleMake = NISSAN : 
+     	      		VehicleYear <= 3.5 : Declined
+     	      		VehicleYear > 3.5 : 
+     	      		    NumberOfOpenRevolvingAccounts <= 2.5 : Declined
+     	      		    NumberOfOpenRevolvingAccounts > 2.5 : 
+     	      		        OccupancyDuration <= 90.0 : Approved
+     	      		        OccupancyDuration > 90.0 : 
+     	      		            AmountRequested <= 14234.5 : Approved
+     	      		            AmountRequested > 14234.5 : Declined
+     	      	VehicleMake = VOLKSWAGEN : 
+     	      		TotalMonthlyDebtBeforeLoan <= 1677.5 : Approved
+     	      		TotalMonthlyDebtBeforeLoan > 1677.5 : 
+     	      		    OccupancyDuration <= 89.0 : 
+     	      		     EstimatedMonthlyPayment <= 267.42499999999995 : 
+     	      		      DownPayment <= 1111.5 : Declined
+     	      		      DownPayment > 1111.5 : Approved
+     	      		     EstimatedMonthlyPayment > 267.42499999999995 : Approved
+     	      		    OccupancyDuration > 89.0 : Declined
+     	      	VehicleMake = TOYOTA : 
+     	      		TotalMonthlyIncome <= 3895.835 : Declined
+     	      		TotalMonthlyIncome > 3895.835 : 
+     	      		    DownPayment <= 2250.0 : 
+     	      		     RequestType = INDIRECT : Approved
+     	      		     RequestType = DEALER PURCHASE : Declined
+     	      		    DownPayment > 2250.0 : Declined
+     	      	VehicleMake = KIA : 
+     	      		VehicleYear <= 6.0 : 
+     	      		 TotalMonthlyDebtBeforeLoan <= 1846.5 : Declined
+     	      		 TotalMonthlyDebtBeforeLoan > 1846.5 : 
+     	      		     NumberOfOpenRevolvingAccounts <= 9.0 : Approved
+     	      		     NumberOfOpenRevolvingAccounts > 9.0 : Declined
+     	      		VehicleYear > 6.0 : Approved
+     	      	VehicleMake = JEEP : 
+     	      		EstimatedMonthlyPayment <= 349.37 : Declined
+     	      		EstimatedMonthlyPayment > 349.37 : 
+     	      		    CoApplicantIndicator = N : Approved
+     	      		    CoApplicantIndicator = Y : Declined
+     	      	VehicleMake = MERCEDES-BENZ : 
+     	      		ModifiedBankruptcyScore <= 284.5 : Declined
+     	      		ModifiedBankruptcyScore > 284.5 : Approved
+     	      	VehicleMake = MAZDA : 
+     	      		OccupancyDuration <= 5.0 : Declined
+     	      		OccupancyDuration > 5.0 : Approved
+     	      	VehicleMake = OTHERS : Approved
+     	      	VehicleMake = GMC : 
+     	      		OccupancyDuration <= 288.5 : Approved
+     	      		OccupancyDuration > 288.5 : Declined
+     	      	VehicleMake = CHRYSLER : 
+     	      		AmountRequested <= 20393.0 : Approved
+     	      		AmountRequested > 20393.0 : Declined
+     	      	VehicleMake = ACURA : 
+     	      		EstimatedMonthlyPayment <= 581.315 : Declined
+     	      		EstimatedMonthlyPayment > 581.315 : Approved
+     	      	VehicleMake = BUICK : 
+     	      		NumberOfOpenRevolvingAccounts <= 9.0 : Approved
+     	      		NumberOfOpenRevolvingAccounts > 9.0 : Declined
+     	      	VehicleMake = RAM : 
+     	      		NumberOfOpenRevolvingAccounts <= 20.5 : Approved
+     	      		NumberOfOpenRevolvingAccounts > 20.5 : Declined
+     	      	VehicleMake = INFINITI : 
+     	      		CoApplicantIndicator = Y : Approved
+     	      		CoApplicantIndicator = N : Declined
+     	      	VehicleMake = BMW : 
+     	      		RequestType = CAR SALE : Approved
+     	      		RequestType = REFINANCE-PROMO : Approved
+     	      		RequestType = INDIRECT : Declined
+     	      	VehicleMake = MITSUBISHI : 
+     	      		CoApplicantIndicator = Y : Declined
+     	      		CoApplicantIndicator = N : Approved
+     	      	VehicleMake = LEXUS : Approved
+     	      	VehicleMake = SUBARU : Approved
+     	      	VehicleMake = DODGE : Declined
+     	      OccupancyStatus = LIVEWITHPARENTS : 
+     	      	VehicleMake = HYUNDAI : 
+     	      		EstimatedMonthlyPayment <= 217.51999999999998 : Declined
+     	      		EstimatedMonthlyPayment > 217.51999999999998 : 
+     	      		    AmountRequested <= 15225.0 : Approved
+     	      		    AmountRequested > 15225.0 : 
+     	      		        NumberOfOpenRevolvingAccounts <= 3.5 : Declined
+     	      		        NumberOfOpenRevolvingAccounts > 3.5 : 
+     	      		            TotalVehicleValue <= 17112.5 : Declined
+     	      		            TotalVehicleValue > 17112.5 : Approved
+     	      	VehicleMake = NISSAN : 
+     	      		NumberOfOpenRevolvingAccounts <= 1.5 : Declined
+     	      		NumberOfOpenRevolvingAccounts > 1.5 : 
+     	      		    AmountRequested <= 19200.5 : Approved
+     	      		    AmountRequested > 19200.5 : 
+     	      		        TotalMonthlyDebtBeforeLoan <= 394.5 : 
+     	      		         OccupancyDuration <= 126.0 : Approved
+     	      		         OccupancyDuration > 126.0 : Declined
+     	      		        TotalMonthlyDebtBeforeLoan > 394.5 : Declined
+     	      	VehicleMake = FORD : 
+     	      		OccupancyDuration <= 150.0 : 
+     	      		 EmployedMonths <= 69.0 : Declined
+     	      		 EmployedMonths > 69.0 : Approved
+     	      		OccupancyDuration > 150.0 : 
+     	      		    AmountRequested <= 17133.5 : Approved
+     	      		    AmountRequested > 17133.5 : 
+     	      		        TotalVehicleValue <= 22756.5 : Declined
+     	      		        TotalVehicleValue > 22756.5 : Approved
+     	      	VehicleMake = TOYOTA : 
+     	      		NumberOfOpenRevolvingAccounts <= 2.5 : 
+     	      		 OccupancyDuration <= 9.0 : Declined
+     	      		 OccupancyDuration > 9.0 : 
+     	      		     EstimatedMonthlyPayment <= 211.63 : 
+     	      		      DownPayment <= 1000.0 : Declined
+     	      		      DownPayment > 1000.0 : Approved
+     	      		     EstimatedMonthlyPayment > 211.63 : Approved
+     	      		NumberOfOpenRevolvingAccounts > 2.5 : 
+     	      		    EstimatedMonthlyPayment <= 262.165 : Declined
+     	      		    EstimatedMonthlyPayment > 262.165 : Approved
+     	      	VehicleMake = CHEVROLET : 
+     	      		DownPayment <= 187.5 : 
+     	      		 VehicleYear <= 6.5 : Approved
+     	      		 VehicleYear > 6.5 : Declined
+     	      		DownPayment > 187.5 : 
+     	      		    OccupancyDuration <= 18.0 : 
+     	      		     NumberOfOpenRevolvingAccounts <= 3.5 : Declined
+     	      		     NumberOfOpenRevolvingAccounts > 3.5 : Approved
+     	      		    OccupancyDuration > 18.0 : Declined
+     	      	VehicleMake = HONDA : 
+     	      		VehicleYear <= 4.5 : Declined
+     	      		VehicleYear > 4.5 : 
+     	      		    PrimeMonthlyRent <= 150.0 : 
+     	      		     NumberOfOpenRevolvingAccounts <= 5.5 : Declined
+     	      		     NumberOfOpenRevolvingAccounts > 5.5 : Approved
+     	      		    PrimeMonthlyRent > 150.0 : Approved
+     	      	VehicleMake = KIA : 
+     	      		ModifiedBankruptcyScore <= 309.5 : 
+     	      		 EstimatedMonthlyPayment <= 208.64499999999998 : Declined
+     	      		 EstimatedMonthlyPayment > 208.64499999999998 : Approved
+     	      		ModifiedBankruptcyScore > 309.5 : Declined
+     	      	VehicleMake = MAZDA : 
+     	      		AmountRequested <= 16707.0 : Declined
+     	      		AmountRequested > 16707.0 : 
+     	      		    NumberOfOpenRevolvingAccounts <= 11.5 : Approved
+     	      		    NumberOfOpenRevolvingAccounts > 11.5 : Declined
+     	      	VehicleMake = VOLKSWAGEN : 
+     	      		TotalMonthlyDebtBeforeLoan <= 332.5 : Declined
+     	      		TotalMonthlyDebtBeforeLoan > 332.5 : 
+     	      		    DownPayment <= 1125.0 : Approved
+     	      		    DownPayment > 1125.0 : Declined
+     	      	VehicleMake = UNDECIDED : 
+     	      		NumberOfOpenRevolvingAccounts <= 1.5 : Declined
+     	      		NumberOfOpenRevolvingAccounts > 1.5 : 
+     	      		    CoApplicantIndicator = N : Approved
+     	      		    CoApplicantIndicator = Y : Declined
+     	      	VehicleMake = JEEP : 
+     	      		TotalMonthlyDebtBeforeLoan <= 1619.5 : Declined
+     	      		TotalMonthlyDebtBeforeLoan > 1619.5 : Approved
+     	      	VehicleMake = DODGE : 
+     	      		NumberOfOpenRevolvingAccounts <= 0.5 : Approved
+     	      		NumberOfOpenRevolvingAccounts > 0.5 : Declined
+     	      	VehicleMake = OTHERS : 
+     	      		TotalVehicleValue <= 17087.5 : Approved
+     	      		TotalVehicleValue > 17087.5 : Declined
+     	      	VehicleMake = CHRYSLER : 
+     	      		TotalVehicleValue <= 17487.5 : Approved
+     	      		TotalVehicleValue > 17487.5 : Declined
+     	      	VehicleMake = MERCEDES-BENZ : 
+     	      		NumberOfOpenRevolvingAccounts <= 2.0 : Declined
+     	      		NumberOfOpenRevolvingAccounts > 2.0 : Approved
+     	      	VehicleMake = BUICK : Declined
+     	      	VehicleMake = RAM : Declined
+     	      	VehicleMake = BMW : Declined
+     	      	VehicleMake = MITSUBISHI : Approved
+     	      	VehicleMake = INFINITI : Declined
+     	      	VehicleMake = GMC : Declined
+     	      	VehicleMake = ACURA : Declined
+     	      	VehicleMake = SUBARU : Declined
+     	      OccupancyStatus = OWN : 
+     	      	VehicleMake = FORD : 
+     	      		TotalVehicleValue <= 24125.0 : 
+     	      		 TotalMonthlyDebtBeforeLoan <= 295.5 : Declined
+     	      		 TotalMonthlyDebtBeforeLoan > 295.5 : Approved
+     	      		TotalVehicleValue > 24125.0 : 
+     	      		    OccupancyDuration <= 40.5 : Approved
+     	      		    OccupancyDuration > 40.5 : Declined
+     	      	VehicleMake = HONDA : 
+     	      		TotalMonthlyDebtBeforeLoan <= 596.5 : Declined
+     	      		TotalMonthlyDebtBeforeLoan > 596.5 : Approved
+     	      	VehicleMake = TOYOTA : 
+     	      		EstimatedMonthlyPayment <= 445.17499999999995 : Approved
+     	      		EstimatedMonthlyPayment > 445.17499999999995 : Declined
+     	      	VehicleMake = NISSAN : 
+     	      		RequestType = INDIRECT : Declined
+     	      		RequestType = CAR SALE : Approved
+     	      	VehicleMake = VOLKSWAGEN : 
+     	      		ModifiedBankruptcyScore <= 308.0 : Declined
+     	      		ModifiedBankruptcyScore > 308.0 : Approved
+     	      	VehicleMake = MAZDA : 
+     	      		EmployedMonths <= 209.5 : Declined
+     	      		EmployedMonths > 209.5 : Approved
+     	      	VehicleMake = HYUNDAI : 
+     	      		AmountRequested <= 18582.0 : Approved
+     	      		AmountRequested > 18582.0 : Declined
+     	      	VehicleMake = CHEVROLET : 
+     	      		NumberOfOpenRevolvingAccounts <= 2.5 : 
+     	      		 OccupancyDuration <= 234.0 : Declined
+     	      		 OccupancyDuration > 234.0 : Approved
+     	      		NumberOfOpenRevolvingAccounts > 2.5 : Approved
+     	      	VehicleMake = OTHERS : 
+     	      		TotalVehicleValue <= 23750.0 : Declined
+     	      		TotalVehicleValue > 23750.0 : Approved
+     	      	VehicleMake = RAM : 
+     	      		EstimatedMonthlyPayment <= 1175.455 : Approved
+     	      		EstimatedMonthlyPayment > 1175.455 : Declined
+     	      	VehicleMake = JEEP : Approved
+     	      	VehicleMake = KIA : 
+     	      		OccupancyDuration <= 91.0 : Declined
+     	      		OccupancyDuration > 91.0 : Approved
+     	      	VehicleMake = CHRYSLER : Approved
+     	      	VehicleMake = BMW : 
+     	      		RequestType = REFINANCE-PROMO : Declined
+     	      		RequestType = INDIRECT : Approved
+     	      	VehicleMake = ACURA : Approved
+     	      	VehicleMake = GMC : Approved
+     	      	VehicleMake = BUICK : 
+     	      		RequestType = CAR SALE : Approved
+     	      		RequestType = INDIRECT : Declined
+     	      	VehicleMake = MERCEDES-BENZ : Declined
+     	      	VehicleMake = LEXUS : Approved
+     	      	VehicleMake = DODGE : Declined
+     	      	VehicleMake = INFINITI : Approved
+     	      	VehicleMake = MITSUBISHI : Approved
+     	      OccupancyStatus = OTHER : 
+     	      	VehicleMake = MAZDA : 
+     	      		TotalMonthlyIncome <= 2525.5 : Declined
+     	      		TotalMonthlyIncome > 2525.5 : Approved
+     	      	VehicleMake = TOYOTA : Declined
+     	      	VehicleMake = NISSAN : 
+     	      		CoApplicantIndicator = N : Declined
+     	      		CoApplicantIndicator = Y : Approved
+     	      	VehicleMake = GMC : 
+     	      		NumberOfOpenRevolvingAccounts <= 8.0 : Approved
+     	      		NumberOfOpenRevolvingAccounts > 8.0 : Declined
+     	      	VehicleMake = JEEP : 
+     	      		RequestType = INDIRECT : Declined
+     	      		RequestType = PRIVATE PARTY : Approved
+     	      	VehicleMake = KIA : 
+     	      		CoApplicantIndicator = Y : Approved
+     	      		CoApplicantIndicator = N : Declined
+     	      	VehicleMake = OTHERS : Approved
+     	      	VehicleMake = DODGE : 
+     	      		CoApplicantIndicator = Y : Approved
+     	      		CoApplicantIndicator = N : Declined
+     	      	VehicleMake = HONDA : 
+     	      		RequestType = LEASE BUYOUT : Declined
+     	      		RequestType = PRIVATE PARTY : Approved
+     	      	VehicleMake = SUBARU : Approved
+     	      	VehicleMake = HYUNDAI : Approved
+     	      	VehicleMake = VOLKSWAGEN : Approved
+     	      	VehicleMake = MITSUBISHI : Approved
+     	      	VehicleMake = CHEVROLET : Declined
+     	      	VehicleMake = MERCEDES-BENZ : Approved
+     	      	VehicleMake = UNDECIDED : Declined
+     	      	VehicleMake = FORD : Approved
+     	      	VehicleMake = ACURA : Declined
+     	     Loanterm > 73.0 : 
+     	         VehicleMake = NISSAN : 
+     	         	AmountRequested <= 32995.0 : 
+     	         	 EstimatedMonthlyPayment <= 269.64 : 
+     	         	  TotalVehicleValue <= 16425.0 : 
+     	         	   OccupancyStatus = LIVEWITHPARENTS : 
+     	         	   	VehicleYear <= 5.5 : Approved
+     	         	   	VehicleYear > 5.5 : Declined
+     	         	   OccupancyStatus = BUYING : 
+     	         	   	NumberOfOpenRevolvingAccounts <= 13.0 : 
+     	         	   	 TotalMonthlyDebtBeforeLoan <= 883.5 : Declined
+     	         	   	 TotalMonthlyDebtBeforeLoan > 883.5 : Approved
+     	         	   	NumberOfOpenRevolvingAccounts > 13.0 : Declined
+     	         	   OccupancyStatus = RENT : Approved
+     	         	   OccupancyStatus = OTHER : Declined
+     	         	   OccupancyStatus = OWN : Approved
+     	         	  TotalVehicleValue > 16425.0 : Declined
+     	         	 EstimatedMonthlyPayment > 269.64 : 
+     	         	     EmployedMonths <= 78.0 : 
+     	         	      DownPayment <= 740.0 : 
+     	         	       OccupancyDuration <= 102.0 : 
+     	         	        TotalVehicleValue <= 22912.5 : Approved
+     	         	        TotalVehicleValue > 22912.5 : 
+     	         	            PrimeMonthlyRent <= 425.0 : 
+     	         	             TotalMonthlyIncome <= 4727.92 : 
+     	         	              TotalMonthlyDebtBeforeLoan <= 560.54 : Approved
+     	         	              TotalMonthlyDebtBeforeLoan > 560.54 : Declined
+     	         	             TotalMonthlyIncome > 4727.92 : Approved
+     	         	            PrimeMonthlyRent > 425.0 : Declined
+     	         	       OccupancyDuration > 102.0 : 
+     	         	           RequestType = INDIRECT : 
+     	         	           	TotalVehicleValue <= 14752.5 : Approved
+     	         	           	TotalVehicleValue > 14752.5 : Declined
+     	         	           RequestType = CAR SALE : 
+     	         	           	NumberOfOpenRevolvingAccounts <= 3.5 : Declined
+     	         	           	NumberOfOpenRevolvingAccounts > 3.5 : Approved
+     	         	           RequestType = REFINANCE : Declined
+     	         	           RequestType = REFINANCE-PROMO : Approved
+     	         	      DownPayment > 740.0 : 
+     	         	          PrimeMonthlyRent <= 475.0 : Approved
+     	         	          PrimeMonthlyRent > 475.0 : 
+     	         	              NumberOfOpenRevolvingAccounts <= 3.5 : 
+     	         	               VehicleYear <= 3.5 : Declined
+     	         	               VehicleYear > 3.5 : Approved
+     	         	              NumberOfOpenRevolvingAccounts > 3.5 : Approved
+     	         	     EmployedMonths > 78.0 : Approved
+     	         	AmountRequested > 32995.0 : 
+     	         	    ModifiedBankruptcyScore <= 169.5 : Declined
+     	         	    ModifiedBankruptcyScore > 169.5 : 
+     	         	        TotalMonthlyDebtBeforeLoan <= 2066.0 : 
+     	         	         TotalMonthlyIncome <= 4852.79 : 
+     	         	          TotalVehicleValue <= 25987.5 : Declined
+     	         	          TotalVehicleValue > 25987.5 : Approved
+     	         	         TotalMonthlyIncome > 4852.79 : 
+     	         	             TotalVehicleValue <= 46572.5 : 
+     	         	              NumberOfOpenRevolvingAccounts <= 15.0 : Declined
+     	         	              NumberOfOpenRevolvingAccounts > 15.0 : Approved
+     	         	             TotalVehicleValue > 46572.5 : Approved
+     	         	        TotalMonthlyDebtBeforeLoan > 2066.0 : Approved
+     	         VehicleMake = HYUNDAI : 
+     	         	ModifiedBankruptcyScore <= 335.5 : 
+     	         	 PrimeMonthlyRent <= 460.0 : 
+     	         	  RequestType = INDIRECT : 
+     	         	  	EstimatedMonthlyPayment <= 216.55 : Declined
+     	         	  	EstimatedMonthlyPayment > 216.55 : 
+     	         	  	    TotalVehicleValue <= 17320.0 : Approved
+     	         	  	    TotalVehicleValue > 17320.0 : 
+     	         	  	        EmployedMonths <= 122.5 : 
+     	         	  	         OccupancyStatus = BUYING : 
+     	         	  	         	TotalMonthlyDebtBeforeLoan <= 1553.77 : Approved
+     	         	  	         	TotalMonthlyDebtBeforeLoan > 1553.77 : 
+     	         	  	         	    DownPayment <= 2821.0 : 
+     	         	  	         	     PrimeMonthlyLiability <= 4568.5 : Declined
+     	         	  	         	     PrimeMonthlyLiability > 4568.5 : Approved
+     	         	  	         	    DownPayment > 2821.0 : Approved
+     	         	  	         OccupancyStatus = RENT : 
+     	         	  	         	TotalMonthlyDebtBeforeLoan <= 481.0 : Approved
+     	         	  	         	TotalMonthlyDebtBeforeLoan > 481.0 : Declined
+     	         	  	         OccupancyStatus = OWN : 
+     	         	  	         	CoApplicantIndicator = N : Approved
+     	         	  	         	CoApplicantIndicator = Y : Declined
+     	         	  	         OccupancyStatus = LIVEWITHPARENTS : 
+     	         	  	         	NumberOfOpenRevolvingAccounts <= 1.5 : Approved
+     	         	  	         	NumberOfOpenRevolvingAccounts > 1.5 : Declined
+     	         	  	        EmployedMonths > 122.5 : Approved
+     	         	  RequestType = CAR SALE : 
+     	         	  	AmountRequested <= 21369.5 : Approved
+     	         	  	AmountRequested > 21369.5 : 
+     	         	  	    EstimatedMonthlyPayment <= 314.19 : Declined
+     	         	  	    EstimatedMonthlyPayment > 314.19 : 
+     	         	  	        OccupancyStatus = RENT : 
+     	         	  	        	TotalMonthlyDebtBeforeLoan <= 955.5 : Approved
+     	         	  	        	TotalMonthlyDebtBeforeLoan > 955.5 : Declined
+     	         	  	        OccupancyStatus = BUYING : Approved
+     	         	  	        OccupancyStatus = OTHER : Approved
+     	         	  	        OccupancyStatus = LIVEWITHPARENTS : Approved
+     	         	  	        OccupancyStatus = OWN : Approved
+     	         	  RequestType = DEALER PURCHASE : Approved
+     	         	  RequestType = REFINANCE : Declined
+     	         	 PrimeMonthlyRent > 460.0 : Approved
+     	         	ModifiedBankruptcyScore > 335.5 : 
+     	         	    PrimeMonthlyLiability <= 95.0 : 
+     	         	     VehicleYear <= 2.5 : Approved
+     	         	     VehicleYear > 2.5 : 
+     	         	         OccupancyDuration <= 27.0 : Approved
+     	         	         OccupancyDuration > 27.0 : Declined
+     	         	    PrimeMonthlyLiability > 95.0 : Approved
+     	         VehicleMake = CHEVROLET : 
+     	         	AmountRequested <= 26743.5 : 
+     	         	 TotalMonthlyIncome <= 4591.665 : Approved
+     	         	 TotalMonthlyIncome > 4591.665 : 
+     	         	     VehicleYear <= 2.5 : Approved
+     	         	     VehicleYear > 2.5 : 
+     	         	         NumberOfOpenRevolvingAccounts <= 9.5 : 
+     	         	          ModifiedBankruptcyScore <= 346.5 : 
+     	         	           CoApplicantIndicator = Y : Approved
+     	         	           CoApplicantIndicator = N : Declined
+     	         	          ModifiedBankruptcyScore > 346.5 : Declined
+     	         	         NumberOfOpenRevolvingAccounts > 9.5 : Approved
+     	         	AmountRequested > 26743.5 : 
+     	         	    RequestType = INDIRECT : 
+     	         	    	PrimeMonthlyLiability <= 3215.5 : 
+     	         	    	 EstimatedMonthlyPayment <= 701.925 : 
+     	         	    	  TotalVehicleValue <= 43035.0 : 
+     	         	    	   NumberOfOpenRevolvingAccounts <= 19.0 : 
+     	         	    	    OccupancyStatus = RENT : 
+     	         	    	    	TotalMonthlyIncome <= 7708.335 : 
+     	         	    	    	 TotalMonthlyDebtBeforeLoan <= 301.0 : Declined
+     	         	    	    	 TotalMonthlyDebtBeforeLoan > 301.0 : 
+     	         	    	    	     EmployedMonths <= 22.5 : Declined
+     	         	    	    	     EmployedMonths > 22.5 : Approved
+     	         	    	    	TotalMonthlyIncome > 7708.335 : Declined
+     	         	    	    OccupancyStatus = LIVEWITHPARENTS : 
+     	         	    	    	CoApplicantIndicator = N : Declined
+     	         	    	    	CoApplicantIndicator = Y : Approved
+     	         	    	    OccupancyStatus = BUYING : 
+     	         	    	    	OccupancyDuration <= 162.0 : Declined
+     	         	    	    	OccupancyDuration > 162.0 : Approved
+     	         	    	    OccupancyStatus = OWN : 
+     	         	    	    	CoApplicantIndicator = N : Approved
+     	         	    	    	CoApplicantIndicator = Y : Declined
+     	         	    	    OccupancyStatus = OTHER : Declined
+     	         	    	   NumberOfOpenRevolvingAccounts > 19.0 : Approved
+     	         	    	  TotalVehicleValue > 43035.0 : 
+     	         	    	      TotalMonthlyDebtBeforeLoan <= 1273.5 : Declined
+     	         	    	      TotalMonthlyDebtBeforeLoan > 1273.5 : Approved
+     	         	    	 EstimatedMonthlyPayment > 701.925 : Declined
+     	         	    	PrimeMonthlyLiability > 3215.5 : Approved
+     	         	    RequestType = CAR SALE : 
+     	         	    	NumberOfOpenRevolvingAccounts <= 18.0 : Approved
+     	         	    	NumberOfOpenRevolvingAccounts > 18.0 : Declined
+     	         	    RequestType = REFINANCE : Approved
+     	         	    RequestType = DEALER PURCHASE : Approved
+     	         VehicleMake = KIA : 
+     	         	AmountRequested <= 21824.5 : 
+     	         	 TotalVehicleValue <= 21410.0 : 
+     	         	  VehicleYear <= 6.5 : Approved
+     	         	  VehicleYear > 6.5 : Declined
+     	         	 TotalVehicleValue > 21410.0 : Declined
+     	         	AmountRequested > 21824.5 : 
+     	         	    EmployedMonths <= 129.0 : 
+     	         	     OccupancyStatus = RENT : 
+     	         	     	EstimatedMonthlyPayment <= 388.755 : Declined
+     	         	     	EstimatedMonthlyPayment > 388.755 : 
+     	         	     	    PrimeMonthlyLiability <= 778.7850000000001 : 
+     	         	     	     NumberOfOpenRevolvingAccounts <= 7.0 : Approved
+     	         	     	     NumberOfOpenRevolvingAccounts > 7.0 : Declined
+     	         	     	    PrimeMonthlyLiability > 778.7850000000001 : Declined
+     	         	     OccupancyStatus = LIVEWITHPARENTS : 
+     	         	     	NumberOfOpenRevolvingAccounts <= 8.0 : 
+     	         	     	 EstimatedMonthlyPayment <= 428.73 : 
+     	         	     	  ModifiedBankruptcyScore <= 298.0 : Approved
+     	         	     	  ModifiedBankruptcyScore > 298.0 : Declined
+     	         	     	 EstimatedMonthlyPayment > 428.73 : Approved
+     	         	     	NumberOfOpenRevolvingAccounts > 8.0 : Declined
+     	         	     OccupancyStatus = BUYING : 
+     	         	     	EstimatedMonthlyPayment <= 327.785 : Approved
+     	         	     	EstimatedMonthlyPayment > 327.785 : 
+     	         	     	    DownPayment <= 250.0 : 
+     	         	     	     OccupancyDuration <= 37.5 : Declined
+     	         	     	     OccupancyDuration > 37.5 : Approved
+     	         	     	    DownPayment > 250.0 : Declined
+     	         	     OccupancyStatus = OTHER : Approved
+     	         	     OccupancyStatus = OWN : Declined
+     	         	    EmployedMonths > 129.0 : 
+     	         	        NumberOfOpenRevolvingAccounts <= 5.5 : 
+     	         	         EmploymentStatus = Employed : Declined
+     	         	         EmploymentStatus = Retired : Approved
+     	         	        NumberOfOpenRevolvingAccounts > 5.5 : Approved
+     	         VehicleMake = DODGE : 
+     	         	EstimatedMonthlyPayment <= 726.8 : 
+     	         	 NumberOfOpenRevolvingAccounts <= 19.0 : 
+     	         	  ModifiedBankruptcyScore <= 248.0 : 
+     	         	   OccupancyDuration <= 72.0 : 
+     	         	    EmployedMonths <= 47.5 : Declined
+     	         	    EmployedMonths > 47.5 : 
+     	         	        TotalMonthlyDebtBeforeLoan <= 2734.5 : 
+     	         	         OccupancyStatus = BUYING : Approved
+     	         	         OccupancyStatus = RENT : Declined
+     	         	         OccupancyStatus = LIVEWITHPARENTS : Approved
+     	         	        TotalMonthlyDebtBeforeLoan > 2734.5 : Declined
+     	         	   OccupancyDuration > 72.0 : Approved
+     	         	  ModifiedBankruptcyScore > 248.0 : 
+     	         	      EmployedMonths <= 26.5 : 
+     	         	       TotalMonthlyIncome <= 3844.0 : Approved
+     	         	       TotalMonthlyIncome > 3844.0 : 
+     	         	           PrimeMonthlyRent <= 400.5 : 
+     	         	            AmountRequested <= 22754.0 : Declined
+     	         	            AmountRequested > 22754.0 : 
+     	         	                OccupancyDuration <= 26.5 : 
+     	         	                 CoApplicantIndicator = N : 
+     	         	                 	DownPayment <= 1500.0 : Declined
+     	         	                 	DownPayment > 1500.0 : Approved
+     	         	                 CoApplicantIndicator = Y : Declined
+     	         	                OccupancyDuration > 26.5 : Approved
+     	         	           PrimeMonthlyRent > 400.5 : Approved
+     	         	      EmployedMonths > 26.5 : 
+     	         	          EmploymentStatus = Employed : Approved
+     	         	          EmploymentStatus = Retired : 
+     	         	          	PrimeMonthlyLiability <= 878.4 : Declined
+     	         	          	PrimeMonthlyLiability > 878.4 : Approved
+     	         	 NumberOfOpenRevolvingAccounts > 19.0 : Declined
+     	         	EstimatedMonthlyPayment > 726.8 : Declined
+     	         VehicleMake = MAZDA : 
+     	         	EstimatedMonthlyPayment <= 338.935 : 
+     	         	 AmountRequested <= 22974.5 : 
+     	         	  ModifiedBankruptcyScore <= 226.5 : Approved
+     	         	  ModifiedBankruptcyScore > 226.5 : 
+     	         	      TotalMonthlyDebtBeforeLoan <= 371.5 : Approved
+     	         	      TotalMonthlyDebtBeforeLoan > 371.5 : 
+     	         	          OccupancyStatus = OTHER : 
+     	         	          	DownPayment <= 1000.0 : 
+     	         	          	 OccupancyDuration <= 5.5 : Approved
+     	         	          	 OccupancyDuration > 5.5 : Declined
+     	         	          	DownPayment > 1000.0 : Approved
+     	         	          OccupancyStatus = RENT : Declined
+     	         	          OccupancyStatus = BUYING : Declined
+     	         	          OccupancyStatus = LIVEWITHPARENTS : Declined
+     	         	          OccupancyStatus = OWN : Declined
+     	         	 AmountRequested > 22974.5 : Declined
+     	         	EstimatedMonthlyPayment > 338.935 : 
+     	         	    PrimeMonthlyLiability <= 55.0 : Declined
+     	         	    PrimeMonthlyLiability > 55.0 : 
+     	         	        TotalVehicleValue <= 26455.0 : Approved
+     	         	        TotalVehicleValue > 26455.0 : 
+     	         	            OccupancyStatus = BUYING : 
+     	         	            	AmountRequested <= 40045.0 : Approved
+     	         	            	AmountRequested > 40045.0 : Declined
+     	         	            OccupancyStatus = OTHER : 
+     	         	            	AmountRequested <= 27594.5 : Declined
+     	         	            	AmountRequested > 27594.5 : Approved
+     	         	            OccupancyStatus = RENT : 
+     	         	            	CoApplicantIndicator = N : Approved
+     	         	            	CoApplicantIndicator = Y : Declined
+     	         	            OccupancyStatus = LIVEWITHPARENTS : Approved
+     	         	            OccupancyStatus = OWN : Approved
+     	         VehicleMake = JEEP : 
+     	         	CoApplicantIndicator = N : 
+     	         		EmploymentStatus = Employed : 
+     	         			TotalMonthlyDebtBeforeLoan <= 158.0 : Declined
+     	         			TotalMonthlyDebtBeforeLoan > 158.0 : 
+     	         			    ModifiedBankruptcyScore <= 189.5 : 
+     	         			     NumberOfOpenRevolvingAccounts <= 2.0 : Declined
+     	         			     NumberOfOpenRevolvingAccounts > 2.0 : 
+     	         			         OccupancyDuration <= 156.0 : Approved
+     	         			         OccupancyDuration > 156.0 : Declined
+     	         			    ModifiedBankruptcyScore > 189.5 : Approved
+     	         		EmploymentStatus = Retired : Approved
+     	         		EmploymentStatus = Others : Declined
+     	         	CoApplicantIndicator = Y : 
+     	         		AmountRequested <= 34349.5 : 
+     	         		 TotalMonthlyDebtBeforeLoan <= 3280.5 : Approved
+     	         		 TotalMonthlyDebtBeforeLoan > 3280.5 : Declined
+     	         		AmountRequested > 34349.5 : 
+     	         		    TotalMonthlyDebtBeforeLoan <= 3571.0 : Declined
+     	         		    TotalMonthlyDebtBeforeLoan > 3571.0 : 
+     	         		        EstimatedMonthlyPayment <= 603.83 : Approved
+     	         		        EstimatedMonthlyPayment > 603.83 : Declined
+     	         VehicleMake = TOYOTA : 
+     	         	OccupancyStatus = RENT : 
+     	         		EstimatedMonthlyPayment <= 328.1 : Declined
+     	         		EstimatedMonthlyPayment > 328.1 : 
+     	         		    EmployedMonths <= 31.0 : Approved
+     	         		    EmployedMonths > 31.0 : 
+     	         		        AmountRequested <= 24212.5 : Approved
+     	         		        AmountRequested > 24212.5 : 
+     	         		            CoApplicantIndicator = N : Declined
+     	         		            CoApplicantIndicator = Y : 
+     	         		            	NumberOfOpenRevolvingAccounts <= 7.0 : Approved
+     	         		            	NumberOfOpenRevolvingAccounts > 7.0 : Declined
+     	         	OccupancyStatus = BUYING : 
+     	         		RequestType = INDIRECT : 
+     	         			AmountRequested <= 28463.5 : 
+     	         			 NumberOfOpenRevolvingAccounts <= 8.5 : 
+     	         			  TotalVehicleValue <= 18682.5 : Approved
+     	         			  TotalVehicleValue > 18682.5 : Declined
+     	         			 NumberOfOpenRevolvingAccounts > 8.5 : Approved
+     	         			AmountRequested > 28463.5 : Approved
+     	         		RequestType = REFINANCE-PROMO : Approved
+     	         		RequestType = REFINANCE : Declined
+     	         	OccupancyStatus = LIVEWITHPARENTS : 
+     	         		AmountRequested <= 29285.0 : 
+     	         		 OccupancyDuration <= 72.0 : Approved
+     	         		 OccupancyDuration > 72.0 : Declined
+     	         		AmountRequested > 29285.0 : Declined
+     	         	OccupancyStatus = OWN : 
+     	         		ModifiedBankruptcyScore <= 312.5 : 
+     	         		 NumberOfOpenRevolvingAccounts <= 14.5 : Declined
+     	         		 NumberOfOpenRevolvingAccounts > 14.5 : Approved
+     	         		ModifiedBankruptcyScore > 312.5 : Approved
+     	         	OccupancyStatus = OTHER : Declined
+     	         VehicleMake = FORD : 
+     	         	AmountRequested <= 47935.5 : 
+     	         	 EstimatedMonthlyPayment <= 267.81 : 
+     	         	  NumberOfOpenRevolvingAccounts <= 11.0 : Declined
+     	         	  NumberOfOpenRevolvingAccounts > 11.0 : Approved
+     	         	 EstimatedMonthlyPayment > 267.81 : 
+     	         	     TotalMonthlyDebtBeforeLoan <= 2077.6549999999997 : 
+     	         	      TotalMonthlyIncome <= 2041.5 : 
+     	         	       NumberOfOpenRevolvingAccounts <= 3.0 : Approved
+     	         	       NumberOfOpenRevolvingAccounts > 3.0 : Declined
+     	         	      TotalMonthlyIncome > 2041.5 : Approved
+     	         	     TotalMonthlyDebtBeforeLoan > 2077.6549999999997 : 
+     	         	         OccupancyStatus = BUYING : 
+     	         	         	NumberOfOpenRevolvingAccounts <= 3.5 : 
+     	         	         	 CoApplicantIndicator = N : Approved
+     	         	         	 CoApplicantIndicator = Y : Declined
+     	         	         	NumberOfOpenRevolvingAccounts > 3.5 : Approved
+     	         	         OccupancyStatus = RENT : Declined
+     	         	AmountRequested > 47935.5 : Declined
+     	         VehicleMake = RAM : 
+     	         	AmountRequested <= 52281.5 : 
+     	         	 TotalMonthlyIncome <= 8395.835 : 
+     	         	  TotalMonthlyDebtBeforeLoan <= 1822.5 : 
+     	         	   OccupancyStatus = LIVEWITHPARENTS : 
+     	         	   	EstimatedMonthlyPayment <= 535.345 : Approved
+     	         	   	EstimatedMonthlyPayment > 535.345 : 
+     	         	   	    NumberOfOpenRevolvingAccounts <= 7.0 : Declined
+     	         	   	    NumberOfOpenRevolvingAccounts > 7.0 : Approved
+     	         	   OccupancyStatus = RENT : 
+     	         	   	VehicleYear <= 2.5 : Declined
+     	         	   	VehicleYear > 2.5 : Approved
+     	         	   OccupancyStatus = OWN : Approved
+     	         	   OccupancyStatus = BUYING : Declined
+     	         	   OccupancyStatus = OTHER : Declined
+     	         	  TotalMonthlyDebtBeforeLoan > 1822.5 : Declined
+     	         	 TotalMonthlyIncome > 8395.835 : Approved
+     	         	AmountRequested > 52281.5 : 
+     	         	    TotalMonthlyDebtBeforeLoan <= 3190.0 : Declined
+     	         	    TotalMonthlyDebtBeforeLoan > 3190.0 : 
+     	         	        NumberOfOpenRevolvingAccounts <= 10.0 : Approved
+     	         	        NumberOfOpenRevolvingAccounts > 10.0 : Declined
+     	         VehicleMake = GMC : 
+     	         	AmountRequested <= 38319.5 : 
+     	         	 VehicleYear <= 1.5 : Declined
+     	         	 VehicleYear > 1.5 : Approved
+     	         	AmountRequested > 38319.5 : 
+     	         	    EmployedMonths <= 103.0 : 
+     	         	     TotalMonthlyIncome <= 7328.5 : 
+     	         	      RequestType = INDIRECT : Declined
+     	         	      RequestType = CAR SALE : Approved
+     	         	     TotalMonthlyIncome > 7328.5 : Approved
+     	         	    EmployedMonths > 103.0 : Declined
+     	         VehicleMake = OTHERS : 
+     	         	OccupancyStatus = BUYING : 
+     	         		EstimatedMonthlyPayment <= 359.1 : Declined
+     	         		EstimatedMonthlyPayment > 359.1 : Approved
+     	         	OccupancyStatus = OWN : 
+     	         		NumberOfOpenRevolvingAccounts <= 7.5 : 
+     	         		 EstimatedMonthlyPayment <= 892.3 : Approved
+     	         		 EstimatedMonthlyPayment > 892.3 : Declined
+     	         		NumberOfOpenRevolvingAccounts > 7.5 : Declined
+     	         	OccupancyStatus = RENT : 
+     	         		CoApplicantIndicator = N : Declined
+     	         		CoApplicantIndicator = Y : Approved
+     	         	OccupancyStatus = OTHER : Approved
+     	         	OccupancyStatus = LIVEWITHPARENTS : 
+     	         		NumberOfOpenRevolvingAccounts <= 6.0 : Declined
+     	         		NumberOfOpenRevolvingAccounts > 6.0 : Approved
+     	         VehicleMake = HONDA : 
+     	         	EstimatedMonthlyPayment <= 600.45 : 
+     	         	 AmountRequested <= 16947.925 : Declined
+     	         	 AmountRequested > 16947.925 : 
+     	         	     TotalMonthlyIncome <= 2100.0 : Declined
+     	         	     TotalMonthlyIncome > 2100.0 : 
+     	         	         PrimeMonthlyLiability <= 1409.5 : Approved
+     	         	         PrimeMonthlyLiability > 1409.5 : 
+     	         	             TotalVehicleValue <= 29597.5 : Declined
+     	         	             TotalVehicleValue > 29597.5 : Approved
+     	         	EstimatedMonthlyPayment > 600.45 : Declined
+     	         VehicleMake = CHRYSLER : 
+     	         	OccupancyDuration <= 90.0 : 
+     	         	 PrimeMonthlyLiability <= 591.0 : 
+     	         	  EstimatedMonthlyPayment <= 456.74 : 
+     	         	   OccupancyStatus = RENT : Approved
+     	         	   OccupancyStatus = LIVEWITHPARENTS : Declined
+     	         	  EstimatedMonthlyPayment > 456.74 : Declined
+     	         	 PrimeMonthlyLiability > 591.0 : Approved
+     	         	OccupancyDuration > 90.0 : Declined
+     	         VehicleMake = UNDECIDED : 
+     	         	TotalMonthlyIncome <= 3629.0 : Declined
+     	         	TotalMonthlyIncome > 3629.0 : 
+     	         	    ModifiedBankruptcyScore <= 321.5 : Declined
+     	         	    ModifiedBankruptcyScore > 321.5 : Approved
+     	         VehicleMake = VOLKSWAGEN : 
+     	         	OccupancyStatus = BUYING : Approved
+     	         	OccupancyStatus = LIVEWITHPARENTS : 
+     	         		CoApplicantIndicator = N : Approved
+     	         		CoApplicantIndicator = Y : Declined
+     	         	OccupancyStatus = RENT : Approved
+     	         	OccupancyStatus = OWN : 
+     	         		NumberOfOpenRevolvingAccounts <= 3.0 : Declined
+     	         		NumberOfOpenRevolvingAccounts > 3.0 : Approved
+     	         	OccupancyStatus = OTHER : Approved
+     	         VehicleMake = BUICK : 
+     	         	TotalMonthlyDebtBeforeLoan <= 2351.48 : 
+     	         	 OccupancyDuration <= 8.5 : Declined
+     	         	 OccupancyDuration > 8.5 : Approved
+     	         	TotalMonthlyDebtBeforeLoan > 2351.48 : Declined
+     	         VehicleMake = MERCEDES-BENZ : 
+     	         	PrimeMonthlyLiability <= 655.5 : 
+     	         	 NumberOfOpenRevolvingAccounts <= 6.0 : Approved
+     	         	 NumberOfOpenRevolvingAccounts > 6.0 : Declined
+     	         	PrimeMonthlyLiability > 655.5 : Approved
+     	         VehicleMake = SUBARU : 
+     	         	EstimatedMonthlyPayment <= 505.37 : Approved
+     	         	EstimatedMonthlyPayment > 505.37 : Declined
+     	         VehicleMake = MITSUBISHI : Approved
+     	         VehicleMake = ACURA : 
+     	         	EstimatedMonthlyPayment <= 170.875 : Declined
+     	         	EstimatedMonthlyPayment > 170.875 : Approved
+     	         VehicleMake = BMW : 
+     	         	RequestType = INDIRECT : Approved
+     	         	RequestType = DEALER PURCHASE : Declined
+     	         VehicleMake = INFINITI : 
+     	         	OccupancyDuration <= 84.0 : Declined
+     	         	OccupancyDuration > 84.0 : Approved
+     	         VehicleMake = LEXUS : Approved
+     	VehicleMileage > 99583.5 : Declined
+     MemberIndicator = Y : 
+     	TotalMonthlyIncome <= 1446.42 : 
+     	 EmployedMonths <= 42.0 : Declined
+     	 EmployedMonths > 42.0 : Approved
+     	TotalMonthlyIncome > 1446.42 : 
+     	    LTV <= 0.8956999999999999 : 
+     	     VehicleMake = TOYOTA : 
+     	     	AmountRequested <= 20777.0 : Approved
+     	     	AmountRequested > 20777.0 : 
+     	     	    OccupancyStatus = BUYING : Approved
+     	     	    OccupancyStatus = OWN : Approved
+     	     	    OccupancyStatus = LIVEWITHPARENTS : Declined
+     	     	    OccupancyStatus = RENT : Declined
+     	     VehicleMake = FORD : 
+     	     	OccupancyDuration <= 9.0 : 
+     	     	 EstimatedMonthlyPayment <= 384.45500000000004 : Declined
+     	     	 EstimatedMonthlyPayment > 384.45500000000004 : Approved
+     	     	OccupancyDuration > 9.0 : Approved
+     	     VehicleMake = CHEVROLET : 
+     	     	Loanterm <= 33.0 : Declined
+     	     	Loanterm > 33.0 : Approved
+     	     VehicleMake = NISSAN : Approved
+     	     VehicleMake = HONDA : 
+     	     	EstimatedMonthlyPayment <= 188.52499999999998 : 
+     	     	 RequestType = REFINANCE-PROMO : Approved
+     	     	 RequestType = PRIVATE PARTY : Approved
+     	     	 RequestType = DEALER PURCHASE : Declined
+     	     	EstimatedMonthlyPayment > 188.52499999999998 : Approved
+     	     VehicleMake = UNDECIDED : Approved
+     	     VehicleMake = HYUNDAI : Approved
+     	     VehicleMake = DODGE : Approved
+     	     VehicleMake = BUICK : Approved
+     	     VehicleMake = KIA : Approved
+     	     VehicleMake = GMC : Approved
+     	     VehicleMake = OTHERS : Approved
+     	     VehicleMake = MAZDA : Approved
+     	     VehicleMake = RAM : Approved
+     	     VehicleMake = JEEP : 
+     	     	OccupancyStatus = BUYING : Approved
+     	     	OccupancyStatus = LIVEWITHPARENTS : Declined
+     	     	OccupancyStatus = RENT : Approved
+     	     VehicleMake = VOLKSWAGEN : Approved
+     	     VehicleMake = ACURA : Approved
+     	     VehicleMake = LEXUS : Approved
+     	     VehicleMake = CHRYSLER : 
+     	     	CoApplicantIndicator = Y : Approved
+     	     	CoApplicantIndicator = N : Declined
+     	     VehicleMake = SUBARU : Approved
+     	     VehicleMake = INFINITI : Approved
+     	     VehicleMake = BMW : Approved
+     	    LTV > 0.8956999999999999 : 
+     	        VehicleYear <= 9.5 : 
+     	         VehicleMake = UNDECIDED : 
+     	         	ModifiedBankruptcyScore <= 308.0 : 
+     	         	 OccupancyStatus = BUYING : 
+     	         	 	EstimatedMonthlyPayment <= 550.355 : 
+     	         	 	 TotalMonthlyDebtBeforeLoan <= 693.5 : Declined
+     	         	 	 TotalMonthlyDebtBeforeLoan > 693.5 : 
+     	         	 	     RequestType = DEALER PURCHASE : 
+     	         	 	     	PrimeMonthlyLiability <= 1983.7649999999999 : 
+     	         	 	     	 OccupancyDuration <= 6.5 : Approved
+     	         	 	     	 OccupancyDuration > 6.5 : 
+     	         	 	     	     AmountRequested <= 13500.0 : Approved
+     	         	 	     	     AmountRequested > 13500.0 : 
+     	         	 	     	         EmployedMonths <= 205.5 : 
+     	         	 	     	          NumberOfOpenRevolvingAccounts <= 16.0 : 
+     	         	 	     	           Loanterm <= 73.5 : 
+     	         	 	     	            isNewVehicle = N : 
+     	         	 	     	            	CoApplicantIndicator = N : 
+     	         	 	     	            		EmploymentStatus = Employed : 
+     	         	 	     	            			Source = LENDER : Declined
+     	         	 	     	            isNewVehicle = Y : Declined
+     	         	 	     	           Loanterm > 73.5 : 
+     	         	 	     	               TotalVehicleValue <= 27500.0 : 
+     	         	 	     	                isNewVehicle = Y : 
+     	         	 	     	                	CoApplicantIndicator = N : 
+     	         	 	     	                		EmploymentStatus = Others : 
+     	         	 	     	                			Source = LENDER : Approved
+     	         	 	     	                		EmploymentStatus = Employed : 
+     	         	 	     	                			Source = LENDER : Approved
+     	         	 	     	                isNewVehicle = N : Approved
+     	         	 	     	               TotalVehicleValue > 27500.0 : Declined
+     	         	 	     	          NumberOfOpenRevolvingAccounts > 16.0 : Approved
+     	         	 	     	         EmployedMonths > 205.5 : Declined
+     	         	 	     	PrimeMonthlyLiability > 1983.7649999999999 : 
+     	         	 	     	    TotalVehicleValue <= 19951.3478065632 : Declined
+     	         	 	     	    TotalVehicleValue > 19951.3478065632 : Approved
+     	         	 	     RequestType = REFINANCE : Declined
+     	         	 	     RequestType = PREAPPROVAL : Declined
+     	         	 	     RequestType = PRIVATE PARTY : Declined
+     	         	 	EstimatedMonthlyPayment > 550.355 : Approved
+     	         	 OccupancyStatus = RENT : 
+     	         	 	PrimeMonthlyRent <= 525.0 : 
+     	         	 	 isNewVehicle = Y : Approved
+     	         	 	 isNewVehicle = N : Declined
+     	         	 	PrimeMonthlyRent > 525.0 : Declined
+     	         	 OccupancyStatus = LIVEWITHPARENTS : Approved
+     	         	 OccupancyStatus = OWN : 
+     	         	 	NumberOfOpenRevolvingAccounts <= 2.5 : Declined
+     	         	 	NumberOfOpenRevolvingAccounts > 2.5 : Approved
+     	         	 OccupancyStatus = OTHER : 
+     	         	 	CoApplicantIndicator = Y : Declined
+     	         	 	CoApplicantIndicator = N : Approved
+     	         	ModifiedBankruptcyScore > 308.0 : 
+     	         	    OccupancyDuration <= 6.5 : 
+     	         	     NumberOfOpenRevolvingAccounts <= 1.5 : Declined
+     	         	     NumberOfOpenRevolvingAccounts > 1.5 : 
+     	         	         RequestType = DEALER PURCHASE : Approved
+     	         	         RequestType = REFINANCE : Declined
+     	         	    OccupancyDuration > 6.5 : 
+     	         	        OccupancyStatus = BUYING : Approved
+     	         	        OccupancyStatus = RENT : Approved
+     	         	        OccupancyStatus = OWN : Approved
+     	         	        OccupancyStatus = LIVEWITHPARENTS : 
+     	         	        	NumberOfOpenRevolvingAccounts <= 6.5 : Approved
+     	         	        	NumberOfOpenRevolvingAccounts > 6.5 : Declined
+     	         	        OccupancyStatus = OTHER : 
+     	         	        	EstimatedMonthlyPayment <= 300.015 : Declined
+     	         	        	EstimatedMonthlyPayment > 300.015 : Approved
+     	         VehicleMake = NISSAN : 
+     	         	EmployedMonths <= 106.5 : 
+     	         	 RequestType = CAR SALE : Approved
+     	         	 RequestType = INDIRECT : 
+     	         	 	OccupancyStatus = RENT : Approved
+     	         	 	OccupancyStatus = LIVEWITHPARENTS : 
+     	         	 		Loanterm <= 78.0 : Declined
+     	         	 		Loanterm > 78.0 : Approved
+     	         	 	OccupancyStatus = BUYING : Approved
+     	         	 	OccupancyStatus = OTHER : Declined
+     	         	 RequestType = REFINANCE-PROMO : Approved
+     	         	 RequestType = DEALER PURCHASE : Approved
+     	         	 RequestType = REFINANCE : Approved
+     	         	EmployedMonths > 106.5 : 
+     	         	    Loanterm <= 69.0 : Declined
+     	         	    Loanterm > 69.0 : 
+     	         	        TotalMonthlyDebtBeforeLoan <= 814.89 : Declined
+     	         	        TotalMonthlyDebtBeforeLoan > 814.89 : Approved
+     	         VehicleMake = TOYOTA : 
+     	         	RequestType = DEALER PURCHASE : Approved
+     	         	RequestType = REFINANCE-PROMO : Approved
+     	         	RequestType = INDIRECT : 
+     	         		EstimatedMonthlyPayment <= 497.215 : Approved
+     	         		EstimatedMonthlyPayment > 497.215 : Declined
+     	         	RequestType = REFINANCE : 
+     	         		ModifiedBankruptcyScore <= 261.5 : Declined
+     	         		ModifiedBankruptcyScore > 261.5 : Approved
+     	         VehicleMake = HYUNDAI : 
+     	         	TotalMonthlyDebtBeforeLoan <= 2375.255 : 
+     	         	 OccupancyStatus = RENT : Approved
+     	         	 OccupancyStatus = BUYING : Approved
+     	         	 OccupancyStatus = LIVEWITHPARENTS : 
+     	         	 	PrimeMonthlyLiability <= 249.425 : Declined
+     	         	 	PrimeMonthlyLiability > 249.425 : Approved
+     	         	 OccupancyStatus = OTHER : Approved
+     	         	 OccupancyStatus = OWN : Approved
+     	         	TotalMonthlyDebtBeforeLoan > 2375.255 : 
+     	         	    EstimatedMonthlyPayment <= 380.15 : 
+     	         	     NumberOfOpenRevolvingAccounts <= 9.5 : Approved
+     	         	     NumberOfOpenRevolvingAccounts > 9.5 : Declined
+     	         	    EstimatedMonthlyPayment > 380.15 : Approved
+     	         VehicleMake = CHEVROLET : 
+     	         	OccupancyDuration <= 27.0 : 
+     	         	 OccupancyStatus = OTHER : 
+     	         	 	NumberOfOpenRevolvingAccounts <= 9.5 : Declined
+     	         	 	NumberOfOpenRevolvingAccounts > 9.5 : Approved
+     	         	 OccupancyStatus = BUYING : 
+     	         	 	RequestType = DEALER PURCHASE : Approved
+     	         	 	RequestType = REFINANCE-PROMO : Approved
+     	         	 	RequestType = INDIRECT : Declined
+     	         	 OccupancyStatus = LIVEWITHPARENTS : Approved
+     	         	 OccupancyStatus = RENT : Declined
+     	         	OccupancyDuration > 27.0 : 
+     	         	    EmploymentStatus = Employed : Approved
+     	         	    EmploymentStatus = Others : 
+     	         	    	CoApplicantIndicator = N : Approved
+     	         	    	CoApplicantIndicator = Y : Declined
+     	         	    EmploymentStatus = Retired : Approved
+     	         VehicleMake = FORD : 
+     	         	NumberOfOpenRevolvingAccounts <= 6.5 : Approved
+     	         	NumberOfOpenRevolvingAccounts > 6.5 : 
+     	         	    RequestType = REFINANCE-PROMO : 
+     	         	    	CoApplicantIndicator = Y : Declined
+     	         	    	CoApplicantIndicator = N : Approved
+     	         	    RequestType = DEALER PURCHASE : Approved
+     	         	    RequestType = INDIRECT : Approved
+     	         VehicleMake = HONDA : 
+     	         	RequestType = INDIRECT : Approved
+     	         	RequestType = REFINANCE-PROMO : 
+     	         		EmployedMonths <= 65.5 : 
+     	         		 ModifiedBankruptcyScore <= 272.5 : Declined
+     	         		 ModifiedBankruptcyScore > 272.5 : Approved
+     	         		EmployedMonths > 65.5 : Declined
+     	         	RequestType = DEALER PURCHASE : Approved
+     	         	RequestType = REFINANCE : 
+     	         		NumberOfOpenRevolvingAccounts <= 11.5 : Approved
+     	         		NumberOfOpenRevolvingAccounts > 11.5 : Declined
+     	         	RequestType = LEASE BUYOUT : Approved
+     	         VehicleMake = DODGE : 
+     	         	RequestType = INDIRECT : 
+     	         		VehicleMileage <= 20.0 : 
+     	         		 CoApplicantIndicator = N : Approved
+     	         		 CoApplicantIndicator = Y : Declined
+     	         		VehicleMileage > 20.0 : Approved
+     	         	RequestType = DEALER PURCHASE : Approved
+     	         	RequestType = REFINANCE-PROMO : Approved
+     	         	RequestType = REFINANCE : Declined
+     	         	RequestType = PRIVATE PARTY : Approved
+     	         VehicleMake = JEEP : 
+     	         	OccupancyDuration <= 156.0 : Approved
+     	         	OccupancyDuration > 156.0 : 
+     	         	    NumberOfOpenRevolvingAccounts <= 4.0 : Approved
+     	         	    NumberOfOpenRevolvingAccounts > 4.0 : Declined
+     	         VehicleMake = KIA : 
+     	         	DownPayment <= 1150.0 : Approved
+     	         	DownPayment > 1150.0 : 
+     	         	    RequestType = INDIRECT : Declined
+     	         	    RequestType = DEALER PURCHASE : Approved
+     	         VehicleMake = MAZDA : 
+     	         	TotalMonthlyDebtBeforeLoan <= 1780.0 : Approved
+     	         	TotalMonthlyDebtBeforeLoan > 1780.0 : Declined
+     	         VehicleMake = VOLKSWAGEN : 
+     	         	TotalVehicleValue <= 10237.5 : Declined
+     	         	TotalVehicleValue > 10237.5 : Approved
+     	         VehicleMake = OTHERS : 
+     	         	OccupancyDuration <= 18.0 : 
+     	         	 RequestType = REFINANCE-PROMO : Approved
+     	         	 RequestType = DEALER PURCHASE : Declined
+     	         	OccupancyDuration > 18.0 : Approved
+     	         VehicleMake = MERCEDES-BENZ : Approved
+     	         VehicleMake = GMC : Approved
+     	         VehicleMake = LEXUS : Approved
+     	         VehicleMake = BUICK : Approved
+     	         VehicleMake = RAM : Approved
+     	         VehicleMake = MITSUBISHI : Approved
+     	         VehicleMake = CHRYSLER : Approved
+     	         VehicleMake = ACURA : Approved
+     	         VehicleMake = BMW : Approved
+     	         VehicleMake = SUBARU : Approved
+     	         VehicleMake = INFINITI : Declined
+     	        VehicleYear > 9.5 : 
+     	            VehicleMake = TOYOTA : 
+     	            	CoApplicantIndicator = Y : Declined
+     	            	CoApplicantIndicator = N : Approved
+     	            VehicleMake = OTHERS : Approved
+     	            VehicleMake = FORD : Declined
+     	            VehicleMake = CHEVROLET : Declined
+     	            VehicleMake = VOLKSWAGEN : Declined
+     	            VehicleMake = UNDECIDED : Declined
+     	            VehicleMake = ACURA : Declined
+     	            VehicleMake = LEXUS : Approved
+     	            VehicleMake = BMW : Declined
+     	            VehicleMake = MERCEDES-BENZ : Declined
+    DTI > 0.481035 : 
+        RequestType = INDIRECT : 
+        	VehicleMake = CHEVROLET : 
+        		ModifiedBankruptcyScore <= 402.5 : Declined
+        		ModifiedBankruptcyScore > 402.5 : Approved
+        	VehicleMake = HONDA : 
+        		DownPayment <= 250.0 : 
+        		 ModifiedBankruptcyScore <= 225.0 : Approved
+        		 ModifiedBankruptcyScore > 225.0 : Declined
+        		DownPayment > 250.0 : Declined
+        	VehicleMake = FORD : Declined
+        	VehicleMake = KIA : 
+        		OccupancyDuration <= 128.0 : Declined
+        		OccupancyDuration > 128.0 : 
+        		    CoApplicantIndicator = Y : Approved
+        		    CoApplicantIndicator = N : Declined
+        	VehicleMake = TOYOTA : Declined
+        	VehicleMake = NISSAN : Declined
+        	VehicleMake = HYUNDAI : 
+        		MemberIndicator = N : Declined
+        		MemberIndicator = Y : Approved
+        	VehicleMake = MAZDA : 
+        		LTV <= 1.1635 : Declined
+        		LTV > 1.1635 : Approved
+        	VehicleMake = DODGE : Declined
+        	VehicleMake = JEEP : Declined
+        	VehicleMake = VOLKSWAGEN : Declined
+        	VehicleMake = RAM : Declined
+        	VehicleMake = OTHERS : Declined
+        	VehicleMake = CHRYSLER : Declined
+        	VehicleMake = GMC : Declined
+        	VehicleMake = MITSUBISHI : Declined
+        	VehicleMake = UNDECIDED : Declined
+        	VehicleMake = SUBARU : Declined
+        	VehicleMake = MERCEDES-BENZ : Declined
+        	VehicleMake = LEXUS : Declined
+        RequestType = DEALER PURCHASE : 
+        	TotalMonthlyIncome <= 7001.29 : Declined
+        	TotalMonthlyIncome > 7001.29 : 
+        	    TotalMonthlyDebtBeforeLoan <= 3921.0 : Approved
+        	    TotalMonthlyDebtBeforeLoan > 3921.0 : Declined
+        RequestType = REFINANCE : Declined
+        RequestType = CAR SALE : 
+        	NumberOfOpenRevolvingAccounts <= 8.0 : Declined
+        	NumberOfOpenRevolvingAccounts > 8.0 : Approved
+        RequestType = REFINANCE-PROMO : 
+        	LTV <= 0.7119500000000001 : Approved
+        	LTV > 0.7119500000000001 : Declined
+        RequestType = PRIVATE PARTY : 
+        	OccupancyDuration <= 8.5 : Approved
+        	OccupancyDuration > 8.5 : Declined
+        RequestType = TITLE LOAN : 
+        	LTV <= 0.3059 : Approved
+        	LTV > 0.3059 : Declined
+        RequestType = PREAPPROVAL : Approved
